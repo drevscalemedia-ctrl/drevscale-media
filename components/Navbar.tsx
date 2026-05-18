@@ -2,7 +2,6 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import { BRAND } from "@/lib/content";
 
 const links = [
   { href: "/services", label: "Services" },
@@ -16,15 +15,17 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20);
+    const onScroll = () => setScrolled(window.scrollY > 40);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   return (
     <nav
-      className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-[#FAF7F2]/95 backdrop-blur-sm shadow-sm" : "bg-transparent"
+      className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${
+        scrolled
+          ? "bg-white/95 backdrop-blur-md shadow-sm border-b border-black/5"
+          : "bg-gradient-to-b from-black/50 via-black/20 to-transparent"
       }`}
       aria-label="Main navigation"
     >
@@ -39,23 +40,27 @@ export default function Navbar() {
               key={l.href}
               href={l.href}
               className={`text-sm font-medium transition-colors hover:text-[#C8522A] ${
-                scrolled ? "text-[#1C1F2E]/70" : "text-[#1C1F2E]/80"
+                scrolled ? "text-[#1C1F2E]/70" : "text-white/80"
               }`}
             >
               {l.label}
             </Link>
           ))}
-          <a
+          <Link
             href="/contact"
-            className="px-5 py-2.5 rounded-full text-sm font-semibold bg-[#C8522A] text-white hover:bg-[#A8432A] transition-colors"
+            className={`px-5 py-2.5 rounded-full text-sm font-semibold transition-all ${
+              scrolled
+                ? "bg-[#C8522A] text-white hover:bg-[#A8432A]"
+                : "bg-white/15 text-white border border-white/30 hover:bg-white/25 backdrop-blur-sm"
+            }`}
           >
             Book a Free Call
-          </a>
+          </Link>
         </div>
 
         <button
           onClick={() => setOpen(!open)}
-          className="md:hidden p-2 text-[#1C1F2E]"
+          className={`md:hidden p-2 transition-colors ${scrolled ? "text-[#1C1F2E]" : "text-white"}`}
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
         >
@@ -64,7 +69,7 @@ export default function Navbar() {
       </div>
 
       {open && (
-        <div className="md:hidden bg-[#FAF7F2] border-t border-[#D4C4B0] px-6 py-6 space-y-4">
+        <div className="md:hidden bg-white border-t border-black/5 px-6 py-6 space-y-4 shadow-lg">
           {links.map((l) => (
             <Link
               key={l.href}
@@ -75,13 +80,13 @@ export default function Navbar() {
               {l.label}
             </Link>
           ))}
-          <a
+          <Link
             href="/contact"
-            className="block text-center py-3.5 rounded-full bg-[#C8522A] text-white font-semibold"
+            className="block text-center py-3.5 rounded-full bg-[#C8522A] text-white font-semibold hover:bg-[#A8432A] transition-colors"
             onClick={() => setOpen(false)}
           >
             Book a Free Call
-          </a>
+          </Link>
         </div>
       )}
     </nav>
@@ -89,18 +94,15 @@ export default function Navbar() {
 }
 
 function LogoWordmark({ scrolled }: { scrolled: boolean }) {
-  const color = "#1C1F2E";
+  const c = scrolled ? "#1C1F2E" : "#FFFFFF";
   return (
     <svg width="156" height="40" viewBox="0 0 156 40" fill="none" aria-label="Drevscale Media">
-      {/* Growth chart arrow */}
-      <polyline points="68,12 74,6 80,9 87,2" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-      <polyline points="84,2 87,2 87,5" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-      {/* drevscale text */}
-      <text x="0" y="30" fontFamily="var(--font-geist-sans),-apple-system,sans-serif" fontWeight="800" fontSize="24" letterSpacing="-0.5" fill={color}>dre</text>
+      <polyline points="68,12 74,6 80,9 87,2" stroke={c} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      <polyline points="84,2 87,2 87,5" stroke={c} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      <text x="0" y="30" fontFamily="var(--font-geist-sans),-apple-system,sans-serif" fontWeight="800" fontSize="24" letterSpacing="-0.5" fill={c}>dre</text>
       <text x="50" y="30" fontFamily="var(--font-geist-sans),-apple-system,sans-serif" fontWeight="800" fontSize="24" fill="#C8522A">v</text>
-      <text x="65" y="30" fontFamily="var(--font-geist-sans),-apple-system,sans-serif" fontWeight="800" fontSize="24" letterSpacing="-0.5" fill={color}>scale</text>
-      {/* MEDIA */}
-      <text x="78" y="40" fontFamily="var(--font-geist-sans),-apple-system,sans-serif" fontWeight="600" fontSize="8" letterSpacing="3.5" fill={color} opacity="0.5" textAnchor="middle">MEDIA</text>
+      <text x="65" y="30" fontFamily="var(--font-geist-sans),-apple-system,sans-serif" fontWeight="800" fontSize="24" letterSpacing="-0.5" fill={c}>scale</text>
+      <text x="78" y="40" fontFamily="var(--font-geist-sans),-apple-system,sans-serif" fontWeight="600" fontSize="8" letterSpacing="3.5" fill={c} opacity="0.45" textAnchor="middle">MEDIA</text>
     </svg>
   );
 }

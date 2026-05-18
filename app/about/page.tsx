@@ -50,7 +50,7 @@ export default function About() {
       <StickyMobileCTA />
       <main>
         {/* Hero */}
-        <section className="relative bg-[#1C1F2E] text-white overflow-hidden py-28">
+        <section className="relative bg-[#111318] text-white overflow-hidden py-28">
           <div className="absolute inset-0 pointer-events-none">
             <div className="absolute -bottom-20 left-0 w-[500px] h-[400px] rounded-full bg-[#C8522A]/8 blur-[100px]" />
           </div>
@@ -72,7 +72,7 @@ export default function About() {
         <MeetCarter />
 
         {/* Values */}
-        <section className="py-24 bg-[#1C1F2E]">
+        <section className="py-24 bg-[#111318]">
           <div className="max-w-5xl mx-auto px-6">
             <motion.div
               initial={{ opacity: 0, y: 20 }}

@@ -25,7 +25,7 @@ export default function Testimonials() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="p-8 rounded-3xl bg-white border border-[#D4C4B0] flex flex-col"
+              className="p-8 rounded-3xl bg-white shadow-lg shadow-black/[0.06] flex flex-col"
             >
               <Quote size={32} className="text-[#C8522A] mb-6 opacity-60" />
               <p className="font-display text-xl font-semibold text-[#1C1F2E] leading-snug mb-6 italic flex-1">

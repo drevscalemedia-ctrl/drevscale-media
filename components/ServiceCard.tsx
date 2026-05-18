@@ -26,7 +26,7 @@ export default function ServiceCard({ type }: Props) {
     <motion.div
       onHoverStart={() => setHovered(true)}
       onHoverEnd={() => setHovered(false)}
-      className="relative p-8 rounded-3xl border border-[#D4C4B0] bg-[#FAF7F2] overflow-hidden cursor-default"
+      className="relative p-8 rounded-3xl bg-white shadow-xl shadow-black/[0.06] overflow-hidden cursor-default"
       whileHover={{ y: -4 }}
       transition={{ duration: 0.3 }}
     >

@@ -17,7 +17,7 @@ export default function Results() {
       <StickyMobileCTA />
       <main>
         {/* Hero */}
-        <section className="relative bg-[#1C1F2E] text-white overflow-hidden py-28">
+        <section className="relative bg-[#111318] text-white overflow-hidden py-28">
           <div className="absolute inset-0 pointer-events-none">
             <div className="absolute top-0 right-0 w-[500px] h-[400px] rounded-full bg-[#E8A848]/8 blur-[100px]" />
           </div>

@@ -16,7 +16,7 @@ export default function Services() {
       <StickyMobileCTA />
       <main>
         {/* Hero */}
-        <section className="relative bg-[#1C1F2E] text-white overflow-hidden py-28">
+        <section className="relative bg-[#111318] text-white overflow-hidden py-28">
           <div className="absolute inset-0 pointer-events-none">
             <div className="absolute -top-24 right-0 w-[500px] h-[400px] rounded-full bg-[#C8522A]/10 blur-[100px]" />
           </div>
@@ -35,7 +35,7 @@ export default function Services() {
         </section>
 
         {/* Service Cards */}
-        <section className="py-24 bg-[#FAF7F2]">
+        <section className="py-28 bg-white">
           <div className="max-w-5xl mx-auto px-6">
             <div className="grid md:grid-cols-2 gap-6 mb-16">
               <ServiceCard type="facebook" />
@@ -130,7 +130,7 @@ export default function Services() {
         <FAQ />
 
         {/* CTA */}
-        <section className="py-24 bg-[#1C1F2E] text-white text-center relative overflow-hidden">
+        <section className="py-32 bg-[#111318] text-white text-center relative overflow-hidden">
           <div className="absolute inset-0 pointer-events-none">
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] rounded-full bg-[#C8522A]/15 blur-[80px]" />
           </div>

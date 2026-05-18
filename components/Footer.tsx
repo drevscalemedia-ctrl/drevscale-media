@@ -4,7 +4,7 @@ import { BRAND } from "@/lib/content";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#1C1F2E] text-white">
+    <footer className="bg-[#111318] text-white">
       {/* Big CTA */}
       <div className="border-b border-white/10 py-24 px-6 text-center">
         <p className="text-[#E8A848] font-semibold text-sm uppercase tracking-widest mb-4">Ready?</p>

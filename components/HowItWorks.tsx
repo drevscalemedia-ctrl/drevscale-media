@@ -4,7 +4,7 @@ import { HOW_IT_WORKS } from "@/lib/content";
 
 export default function HowItWorks() {
   return (
-    <section className="py-24 bg-[#1C1F2E] overflow-hidden">
+    <section className="py-28 bg-[#111318] overflow-hidden">
       <div className="max-w-6xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

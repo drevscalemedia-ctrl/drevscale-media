@@ -19,7 +19,7 @@ export default function Contact() {
       <Navbar />
       <main>
         {/* Hero */}
-        <section className="relative bg-[#1C1F2E] text-white overflow-hidden py-28">
+        <section className="relative bg-[#111318] text-white overflow-hidden py-28">
           <div className="absolute inset-0 pointer-events-none">
             <div className="absolute -bottom-20 left-1/3 w-[500px] h-[400px] rounded-full bg-[#C8522A]/10 blur-[100px]" />
           </div>
