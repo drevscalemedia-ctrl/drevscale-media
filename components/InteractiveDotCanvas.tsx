@@ -17,7 +17,7 @@ const REPEL_R = 120;
 const REPEL_R_SQ = REPEL_R * REPEL_R;
 const SPRING = 0.08;
 const FRICTION = 0.85;
-const PUSH = 1.5;
+const PUSH = 2.2;
 const REST = 0.005;
 
 export default function InteractiveDotCanvas() {
@@ -72,7 +72,8 @@ export default function InteractiveDotCanvas() {
         if (!r.reduced && (near || dot.moving)) {
           if (near) {
             const dist = Math.sqrt(dSq);
-            const force = (REPEL_R - dist) / REPEL_R;
+            const t = (REPEL_R - dist) / REPEL_R;
+            const force = t * t; // quadratic: edge barely moves, center pushes hard
             const angle = Math.atan2(dy, dx);
             dot.vx += Math.cos(angle) * force * PUSH;
             dot.vy += Math.sin(angle) * force * PUSH;
