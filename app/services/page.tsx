@@ -18,14 +18,14 @@ export default function Services() {
         {/* Hero */}
         <section className="relative bg-[#111318] text-white overflow-hidden py-28">
           <div className="absolute inset-0 pointer-events-none">
-            <div className="absolute -top-24 right-0 w-[500px] h-[400px] rounded-full bg-[#4A90D9]/10 blur-[100px]" />
+            <div className="absolute -top-24 right-0 w-[500px] h-[400px] rounded-full bg-[#1D9BF0]/10 blur-[100px]" />
           </div>
           <div className="relative max-w-5xl mx-auto px-6">
             <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-              <p className="text-[#93BCED] font-semibold text-sm uppercase tracking-widest mb-4">Services</p>
+              <p className="text-[#7DD3FC] font-semibold text-sm uppercase tracking-widest mb-4">Services</p>
               <h1 className="font-display text-6xl md:text-7xl font-black leading-none mb-6">
                 What we<br />
-                <em className="not-italic text-[#4A90D9]">actually do.</em>
+                <em className="not-italic text-[#1D9BF0]">actually do.</em>
               </h1>
               <p className="text-white/55 text-xl max-w-2xl leading-relaxed">
                 Two services built to work together — drive more people in the door, and give them a great first impression when they look you up.
@@ -53,7 +53,7 @@ export default function Services() {
                 id="facebook-ads"
               >
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="w-10 h-10 rounded-xl bg-[#4A90D9]/10 flex items-center justify-center text-xl">📣</div>
+                  <div className="w-10 h-10 rounded-xl bg-[#1D9BF0]/10 flex items-center justify-center text-xl">📣</div>
                   <h3 className="font-display text-2xl font-black text-[#1C1F2E]">Facebook Ads Pricing</h3>
                 </div>
                 <div className="space-y-4 mb-6">
@@ -71,12 +71,12 @@ export default function Services() {
                   </div>
                   <div className="flex justify-between items-center py-3 bg-[#F1F5F9] rounded-xl px-4 -mx-2">
                     <span className="font-semibold text-[#1C1F2E] text-sm">Total monthly investment</span>
-                    <span className="font-display text-xl font-black text-[#4A90D9]">{PRICING.fbAds.totalRange}</span>
+                    <span className="font-display text-xl font-black text-[#1D9BF0]">{PRICING.fbAds.totalRange}</span>
                   </div>
                 </div>
                 <Link
                   href="/contact"
-                  className="block w-full text-center py-4 rounded-full bg-[#4A90D9] text-white font-bold hover:bg-[#3478C2] transition-colors"
+                  className="block w-full text-center py-4 rounded-full bg-[#1D9BF0] text-white font-bold hover:bg-[#0F85D0] transition-colors"
                 >
                   Get Started with Ads →
                 </Link>
@@ -92,7 +92,7 @@ export default function Services() {
                 id="web-design"
               >
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="w-10 h-10 rounded-xl bg-[#4A90D9]/10 flex items-center justify-center text-xl">💻</div>
+                  <div className="w-10 h-10 rounded-xl bg-[#1D9BF0]/10 flex items-center justify-center text-xl">💻</div>
                   <h3 className="font-display text-2xl font-black text-[#1C1F2E]">Website Pricing</h3>
                 </div>
                 <div className="space-y-4 mb-6">
@@ -132,19 +132,19 @@ export default function Services() {
         {/* CTA */}
         <section className="py-32 bg-[#111318] text-white text-center relative overflow-hidden">
           <div className="absolute inset-0 pointer-events-none">
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] rounded-full bg-[#4A90D9]/15 blur-[80px]" />
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] rounded-full bg-[#1D9BF0]/15 blur-[80px]" />
           </div>
           <div className="relative max-w-2xl mx-auto px-6">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-              <p className="text-[#93BCED] font-semibold text-sm uppercase tracking-widest mb-4">Ready?</p>
+              <p className="text-[#7DD3FC] font-semibold text-sm uppercase tracking-widest mb-4">Ready?</p>
               <h2 className="font-display text-5xl font-black mb-6">
                 Let's talk about<br />
-                <em className="not-italic text-[#4A90D9]">your business.</em>
+                <em className="not-italic text-[#1D9BF0]">your business.</em>
               </h2>
               <p className="text-white/50 text-lg mb-10">Free 20-minute call. No pressure. Just honest advice.</p>
               <Link
                 href="/contact"
-                className="inline-flex items-center px-10 py-5 rounded-full bg-[#4A90D9] text-white font-bold text-lg hover:bg-[#3478C2] transition-colors"
+                className="inline-flex items-center px-10 py-5 rounded-full bg-[#1D9BF0] text-white font-bold text-lg hover:bg-[#0F85D0] transition-colors"
               >
                 Book a Free Strategy Call →
               </Link>

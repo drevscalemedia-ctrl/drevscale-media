@@ -38,7 +38,7 @@ export default function CaseStudyCard({ cs, delay = 0 }: { cs: CaseStudy; delay?
           <h3 className="font-display text-2xl font-black text-white">{cs.industry}</h3>
           <p className="text-white/40 text-sm mt-1">📍 {cs.location} · {cs.timeframe}</p>
         </div>
-        <span className="px-3 py-1.5 rounded-full bg-[#4A90D9]/20 text-[#93BCED] text-xs font-semibold">
+        <span className="px-3 py-1.5 rounded-full bg-[#1D9BF0]/20 text-[#7DD3FC] text-xs font-semibold">
           ${cs.adSpend} ad spend
         </span>
       </div>
@@ -54,7 +54,7 @@ export default function CaseStudyCard({ cs, delay = 0 }: { cs: CaseStudy; delay?
             <p className="text-[#64748B] text-xs uppercase tracking-wider mb-2">{m.label}</p>
             <div className="flex items-center justify-center gap-2">
               <span className="text-[#64748B] line-through text-sm">{m.before}</span>
-              <span className="text-[#4A90D9]">→</span>
+              <span className="text-[#1D9BF0]">→</span>
               <span className="font-display text-2xl font-black text-[#1C1F2E]">{m.after}</span>
             </div>
           </div>
@@ -70,7 +70,7 @@ export default function CaseStudyCard({ cs, delay = 0 }: { cs: CaseStudy; delay?
               <XAxis dataKey="week" tick={{ fontSize: 9, fill: "#64748B" }} axisLine={false} tickLine={false} interval={2} />
               <YAxis tick={{ fontSize: 9, fill: "#64748B" }} axisLine={false} tickLine={false} width={24} />
               <Tooltip contentStyle={{ borderRadius: 8, border: "1px solid #CBD5E1", fontSize: 11 }} />
-              <Line type="monotone" dataKey="leads" stroke="#4A90D9" strokeWidth={2.5} dot={false} />
+              <Line type="monotone" dataKey="leads" stroke="#1D9BF0" strokeWidth={2.5} dot={false} />
             </LineChart>
           </ResponsiveContainer>
         </div>
@@ -80,7 +80,7 @@ export default function CaseStudyCard({ cs, delay = 0 }: { cs: CaseStudy; delay?
       <div className="px-8 pb-8">
         <p className="text-[#64748B] text-sm leading-relaxed mb-5">{cs.summary}</p>
         <div className="p-5 rounded-2xl bg-[#F1F5F9] border border-[#CBD5E1]">
-          <Quote size={16} className="text-[#4A90D9] mb-2 opacity-60" />
+          <Quote size={16} className="text-[#1D9BF0] mb-2 opacity-60" />
           <p className="font-display italic text-[#1C1F2E] text-lg">"{cs.quote}"</p>
           <p className="text-[#64748B] text-xs mt-2">— [CLIENT NAME], {cs.industry}</p>
         </div>

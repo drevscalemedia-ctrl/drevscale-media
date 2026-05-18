@@ -12,10 +12,10 @@ export default function HowItWorks() {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <p className="text-[#93BCED] font-semibold text-sm uppercase tracking-widest mb-4">Process</p>
+          <p className="text-[#7DD3FC] font-semibold text-sm uppercase tracking-widest mb-4">Process</p>
           <h2 className="font-display text-5xl font-black text-white leading-tight">
             From call to leads<br />
-            <em className="text-[#4A90D9] not-italic">in 48 hours.</em>
+            <em className="text-[#1D9BF0] not-italic">in 48 hours.</em>
           </h2>
         </motion.div>
 
@@ -34,9 +34,9 @@ export default function HowItWorks() {
                 className="relative"
               >
                 <div className="w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center mb-6">
-                  <span className="font-display text-2xl font-black text-[#93BCED]">{step.step}</span>
+                  <span className="font-display text-2xl font-black text-[#7DD3FC]">{step.step}</span>
                 </div>
-                <p className="text-[#4A90D9] text-xs font-semibold uppercase tracking-wider mb-2">{step.subtitle}</p>
+                <p className="text-[#1D9BF0] text-xs font-semibold uppercase tracking-wider mb-2">{step.subtitle}</p>
                 <h3 className="text-white font-bold text-xl mb-3">{step.title}</h3>
                 <p className="text-white/45 text-sm leading-relaxed">{step.desc}</p>
               </motion.div>

@@ -39,11 +39,11 @@ export default function ServiceCard({ type }: Props) {
       />
 
       <div className="relative z-10">
-        <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 transition-colors duration-300 ${hovered ? "bg-[#4A90D9]" : "bg-[#F1F5F9]"}`}>
-          <Icon size={24} className={hovered ? "text-white" : "text-[#4A90D9]"} />
+        <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 transition-colors duration-300 ${hovered ? "bg-[#1D9BF0]" : "bg-[#F1F5F9]"}`}>
+          <Icon size={24} className={hovered ? "text-white" : "text-[#1D9BF0]"} />
         </div>
 
-        <p className={`text-xs font-semibold uppercase tracking-widest mb-2 transition-colors duration-300 ${hovered ? "text-[#93BCED]" : "text-[#4A90D9]"}`}>
+        <p className={`text-xs font-semibold uppercase tracking-widest mb-2 transition-colors duration-300 ${hovered ? "text-[#7DD3FC]" : "text-[#1D9BF0]"}`}>
           {isFb ? "Primary Service" : "Add-on Service"}
         </p>
 
@@ -71,7 +71,7 @@ export default function ServiceCard({ type }: Props) {
                   transition={{ delay: i * 0.05 }}
                   className="flex items-start gap-3"
                 >
-                  <CheckCircle2 size={16} className="text-[#93BCED] flex-shrink-0 mt-0.5" />
+                  <CheckCircle2 size={16} className="text-[#7DD3FC] flex-shrink-0 mt-0.5" />
                   <div>
                     <span className="text-white text-sm font-semibold">{item.title}</span>
                     <span className="text-white/50 text-xs ml-2">{item.desc}</span>
@@ -85,14 +85,14 @@ export default function ServiceCard({ type }: Props) {
         <div className="flex items-center justify-between">
           <div>
             <p className={`text-xs uppercase tracking-wider mb-1 transition-colors duration-300 ${hovered ? "text-white/40" : "text-[#64748B]"}`}>Starting from</p>
-            <p className={`font-bold text-lg transition-colors duration-300 ${hovered ? "text-[#93BCED]" : "text-[#1C1F2E]"}`}>{price}</p>
+            <p className={`font-bold text-lg transition-colors duration-300 ${hovered ? "text-[#7DD3FC]" : "text-[#1C1F2E]"}`}>{price}</p>
           </div>
           <Link
             href={href}
             className={`px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${
               hovered
-                ? "bg-[#4A90D9] text-white hover:bg-[#3478C2]"
-                : "border border-[#CBD5E1] text-[#1C1F2E] hover:border-[#4A90D9]"
+                ? "bg-[#1D9BF0] text-white hover:bg-[#0F85D0]"
+                : "border border-[#CBD5E1] text-[#1C1F2E] hover:border-[#1D9BF0]"
             }`}
           >
             Learn more

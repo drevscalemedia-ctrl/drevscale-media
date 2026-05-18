@@ -39,7 +39,7 @@ export default function Logo({ dark = false }: { dark?: boolean }) {
         fontFamily="var(--font-geist-sans), -apple-system, Arial, sans-serif"
         fontWeight="800"
         fontSize="26"
-        fill="#4A90D9"
+        fill="#1D9BF0"
       >
         v
       </text>

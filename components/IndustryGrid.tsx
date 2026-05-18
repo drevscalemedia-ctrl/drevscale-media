@@ -13,7 +13,7 @@ export default function IndustryGrid() {
           viewport={{ once: true }}
           className="text-center mb-14"
         >
-          <p className="text-[#4A90D9] font-semibold text-sm uppercase tracking-widest mb-3">Who We Serve</p>
+          <p className="text-[#1D9BF0] font-semibold text-sm uppercase tracking-widest mb-3">Who We Serve</p>
           <h2 className="font-display text-5xl font-black text-[#1C1F2E]">
             Local businesses,<br />all across the East Valley.
           </h2>
@@ -69,7 +69,7 @@ function IndustryTile({ industry, delay }: { industry: typeof INDUSTRIES[0]; del
           className="absolute inset-0 rounded-2xl bg-[#1C1F2E] flex flex-col items-center justify-center gap-2 px-4 text-center"
           style={{ backfaceVisibility: "hidden", transform: "rotateY(180deg)" }}
         >
-          <span className="text-[#93BCED] font-bold text-xs uppercase tracking-wider">{industry.name}</span>
+          <span className="text-[#7DD3FC] font-bold text-xs uppercase tracking-wider">{industry.name}</span>
           <p className="text-white text-sm leading-snug">{industry.stat}</p>
           <span className="text-white/30 text-xs">typical range*</span>
         </div>

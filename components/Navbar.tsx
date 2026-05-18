@@ -28,15 +28,15 @@ export default function Navbar() {
               <Link
                 key={l.href}
                 href={l.href}
-                className="text-sm text-[#9CA3AF] hover:text-[#F5F5F5] transition-colors font-medium"
+                className="text-sm text-[#A0A0A0] hover:text-[#F5F5F5] transition-colors font-medium"
               >
                 {l.label}
               </Link>
             ))}
             <Link
               href="/contact"
-              className="px-5 py-2 rounded-xl bg-[#4A90D9] text-white text-sm font-semibold hover:bg-[#3478C2] transition-colors"
-              style={{ boxShadow: "0 0 20px rgba(74,144,217,0.3)" }}
+              className="px-5 py-2 rounded-xl bg-[#1D9BF0] text-white text-sm font-semibold hover:bg-[#0F85D0] transition-colors"
+              style={{ boxShadow: "0 0 20px rgba(29,155,240,0.3)" }}
             >
               Book a Call
             </Link>
@@ -45,7 +45,7 @@ export default function Navbar() {
           {/* Mobile toggle */}
           <button
             onClick={() => setOpen(!open)}
-            className="md:hidden text-[#9CA3AF] hover:text-white transition-colors p-1"
+            className="md:hidden text-[#A0A0A0] hover:text-white transition-colors p-1"
             aria-label={open ? "Close menu" : "Open menu"}
           >
             {open ? <X size={20} /> : <Menu size={20} />}
@@ -59,7 +59,7 @@ export default function Navbar() {
               <Link
                 key={l.href}
                 href={l.href}
-                className="block text-sm text-[#9CA3AF] hover:text-white transition-colors font-medium py-1"
+                className="block text-sm text-[#A0A0A0] hover:text-white transition-colors font-medium py-1"
                 onClick={() => setOpen(false)}
               >
                 {l.label}
@@ -67,9 +67,9 @@ export default function Navbar() {
             ))}
             <Link
               href="/contact"
-              className="block text-center py-3 rounded-xl bg-[#4A90D9] text-white font-semibold text-sm hover:bg-[#3478C2] transition-colors"
+              className="block text-center py-3 rounded-xl bg-[#1D9BF0] text-white font-semibold text-sm hover:bg-[#0F85D0] transition-colors"
               onClick={() => setOpen(false)}
-              style={{ boxShadow: "0 0 20px rgba(74,144,217,0.25)" }}
+              style={{ boxShadow: "0 0 20px rgba(29,155,240,0.25)" }}
             >
               Book a Call
             </Link>
@@ -88,7 +88,7 @@ function LogoWordmark() {
       <polyline points="58,1 61,1 61,4" stroke="#F5F5F5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
       {/* Wordmark — white text, blue V */}
       <text x="0" y="30" fontFamily="var(--font-geist-sans),-apple-system,sans-serif" fontWeight="800" fontSize="24" letterSpacing="-0.5">
-        <tspan fill="#F5F5F5">dre</tspan><tspan fill="#4A90D9">v</tspan><tspan fill="#F5F5F5">scale</tspan>
+        <tspan fill="#F5F5F5">dre</tspan><tspan fill="#1D9BF0">v</tspan><tspan fill="#F5F5F5">scale</tspan>
       </text>
       <text x="53" y="40" fontFamily="var(--font-geist-sans),-apple-system,sans-serif" fontWeight="600" fontSize="8" letterSpacing="3" fill="#F5F5F5" opacity="0.3" textAnchor="middle">MEDIA</text>
     </svg>

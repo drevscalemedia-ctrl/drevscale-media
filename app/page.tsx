@@ -40,7 +40,7 @@ export default function Home() {
           <div
             className="absolute inset-0 pointer-events-none"
             style={{
-              background: "radial-gradient(ellipse 900px 700px at 38% 55%, rgba(74,144,217,0.14) 0%, transparent 65%)",
+              background: "radial-gradient(ellipse 900px 700px at 38% 55%, rgba(29,155,240,0.14) 0%, transparent 65%)",
             }}
           />
 
@@ -54,9 +54,9 @@ export default function Home() {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#4A90D9]/25 bg-[#4A90D9]/[0.08] text-[#4A90D9] text-xs font-semibold uppercase tracking-widest mb-9"
+              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#1D9BF0]/25 bg-[#1D9BF0]/[0.08] text-[#1D9BF0] text-xs font-semibold uppercase tracking-widest mb-9"
             >
-              <span className="w-1.5 h-1.5 rounded-full bg-[#4A90D9] animate-pulse" />
+              <span className="w-1.5 h-1.5 rounded-full bg-[#1D9BF0] animate-pulse" />
               {BRAND.scarcity}
             </motion.div>
 
@@ -68,7 +68,7 @@ export default function Home() {
               className="text-[68px] md:text-[88px] font-black leading-[1.02] tracking-[-0.03em] text-[#F5F5F5] mb-7"
             >
               More Leads.<br />
-              <span className="text-[#4A90D9]">More Customers.</span>
+              <span className="text-[#1D9BF0]">More Customers.</span>
             </motion.h1>
 
             {/* Subheading */}
@@ -76,7 +76,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.16 }}
-              className="text-[18px] leading-relaxed text-[#9CA3AF] max-w-lg mx-auto mb-12"
+              className="text-[18px] leading-relaxed text-[#A0A0A0] max-w-lg mx-auto mb-12"
             >
               Facebook & Instagram ads for local businesses in Fountain Hills &
               Scottsdale. Done-for-you. Zero guesswork.
@@ -91,8 +91,8 @@ export default function Home() {
             >
               <Link
                 href="/contact"
-                className="inline-flex items-center px-8 py-4 rounded-xl bg-[#4A90D9] text-white font-semibold text-sm hover:bg-[#3478C2] transition-colors"
-                style={{ boxShadow: "0 0 40px rgba(74,144,217,0.35)" }}
+                className="inline-flex items-center px-8 py-4 rounded-xl bg-[#1D9BF0] text-white font-semibold text-sm hover:bg-[#0F85D0] transition-colors"
+                style={{ boxShadow: "0 0 40px rgba(29,155,240,0.35)" }}
               >
                 Book a Free Strategy Call →
               </Link>
@@ -109,7 +109,7 @@ export default function Home() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.45 }}
-              className="flex items-center justify-center gap-6 mt-14 text-xs text-[#9CA3AF]/50 flex-wrap"
+              className="flex items-center justify-center gap-6 mt-14 text-xs text-[#A0A0A0]/50 flex-wrap"
             >
               <span>📍 Fountain Hills, AZ</span>
               <span className="w-px h-3 bg-white/10" />
@@ -136,7 +136,7 @@ export default function Home() {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.08 }}
               >
-                <div className="font-display text-5xl font-black leading-none mb-2 text-[#93BCED]">
+                <div className="font-display text-5xl font-black leading-none mb-2 text-[#7DD3FC]">
                   {stat.raw ? stat.raw : <AnimatedCounter end={stat.end!} suffix={stat.suffix} />}
                 </div>
                 <div className="text-white/50 text-sm">{stat.label}</div>
@@ -154,7 +154,7 @@ export default function Home() {
               viewport={{ once: true }}
               className="mb-16"
             >
-              <p className="text-[#4A90D9] font-semibold text-sm uppercase tracking-widest mb-4">What We Do</p>
+              <p className="text-[#1D9BF0] font-semibold text-sm uppercase tracking-widest mb-4">What We Do</p>
               <h2 className="font-display text-6xl font-black text-[#111318] leading-none">
                 Two services.<br />One goal.
               </h2>
@@ -181,7 +181,7 @@ export default function Home() {
               viewport={{ once: true }}
               className="mb-16"
             >
-              <p className="text-[#4A90D9] font-semibold text-sm uppercase tracking-widest mb-4">Industries We Serve</p>
+              <p className="text-[#1D9BF0] font-semibold text-sm uppercase tracking-widest mb-4">Industries We Serve</p>
               <h2 className="font-display text-6xl font-black text-[#111318] leading-none">
                 Does this work for<br />your business?
               </h2>
@@ -203,7 +203,7 @@ export default function Home() {
         {/* ── CTA ──────────────────────────────────────────── */}
         <section className="py-32 bg-[#111318] text-white text-center relative overflow-hidden">
           <div className="absolute inset-0 pointer-events-none">
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] rounded-full bg-[#4A90D9]/15 blur-[100px]" />
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] rounded-full bg-[#1D9BF0]/15 blur-[100px]" />
           </div>
           <div className="relative max-w-2xl mx-auto px-6">
             <motion.div
@@ -211,15 +211,15 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <p className="text-[#93BCED] font-semibold text-sm uppercase tracking-widest mb-5">Still thinking?</p>
+              <p className="text-[#7DD3FC] font-semibold text-sm uppercase tracking-widest mb-5">Still thinking?</p>
               <h2 className="font-display text-6xl md:text-7xl font-black leading-[0.95] mb-8">
                 The call is free.<br />
-                <em className="not-italic text-[#4A90D9]">The leads aren't.</em>
+                <em className="not-italic text-[#1D9BF0]">The leads aren't.</em>
               </h2>
               <p className="text-white/45 text-xl mb-12">20 minutes. No pitch. Just an honest look at what Facebook ads could do for your business.</p>
               <Link
                 href="/contact"
-                className="inline-flex items-center px-10 py-5 rounded-full bg-[#4A90D9] text-white font-bold text-lg hover:bg-[#3478C2] transition-colors"
+                className="inline-flex items-center px-10 py-5 rounded-full bg-[#1D9BF0] text-white font-bold text-lg hover:bg-[#0F85D0] transition-colors"
               >
                 Book a Free Strategy Call →
               </Link>

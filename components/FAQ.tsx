@@ -16,7 +16,7 @@ export default function FAQ() {
           viewport={{ once: true }}
           className="mb-12 text-center"
         >
-          <p className="text-[#4A90D9] font-semibold text-sm uppercase tracking-widest mb-3">FAQ</p>
+          <p className="text-[#1D9BF0] font-semibold text-sm uppercase tracking-widest mb-3">FAQ</p>
           <h2 className="font-display text-5xl font-black text-[#1C1F2E]">Common questions.</h2>
         </motion.div>
 
@@ -36,7 +36,7 @@ export default function FAQ() {
                 aria-expanded={open === i}
               >
                 <span className="font-semibold text-[#1C1F2E]">{faq.q}</span>
-                <span className="flex-shrink-0 w-8 h-8 rounded-full bg-[#F1F5F9] flex items-center justify-center text-[#4A90D9]">
+                <span className="flex-shrink-0 w-8 h-8 rounded-full bg-[#F1F5F9] flex items-center justify-center text-[#1D9BF0]">
                   {open === i ? <Minus size={16} /> : <Plus size={16} />}
                 </span>
               </button>

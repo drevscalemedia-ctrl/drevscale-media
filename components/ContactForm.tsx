@@ -50,7 +50,7 @@ export default function ContactForm() {
         className="flex flex-col items-center justify-center text-center py-16 px-8 rounded-3xl border border-[#CBD5E1] bg-[#F1F5F9]"
       >
         <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ delay: 0.2, type: "spring" }}>
-          <CheckCircle2 size={56} className="text-[#4A90D9] mb-6" />
+          <CheckCircle2 size={56} className="text-[#1D9BF0] mb-6" />
         </motion.div>
         <h3 className="font-display text-3xl font-black text-[#1C1F2E] mb-2">You're on the calendar.</h3>
         <p className="text-[#64748B]">Carter will reach out within 4 hours to confirm your call time.</p>
@@ -78,7 +78,7 @@ export default function ContactForm() {
         <select
           value={industry}
           onChange={(e) => setIndustry(e.target.value)}
-          className="w-full px-4 pt-6 pb-2.5 rounded-xl border border-[#CBD5E1] bg-[#FFFFFF] text-[#1C1F2E] text-sm focus:outline-none focus:ring-2 focus:ring-[#4A90D9]/30 appearance-none"
+          className="w-full px-4 pt-6 pb-2.5 rounded-xl border border-[#CBD5E1] bg-[#FFFFFF] text-[#1C1F2E] text-sm focus:outline-none focus:ring-2 focus:ring-[#1D9BF0]/30 appearance-none"
         >
           <option value="">Select your industry</option>
           {INDUSTRIES.map((i) => <option key={i.name} value={i.name}>{i.name}</option>)}
@@ -91,7 +91,7 @@ export default function ContactForm() {
         <select
           value={revenue}
           onChange={(e) => setRevenue(e.target.value)}
-          className="w-full px-4 pt-6 pb-2.5 rounded-xl border border-[#CBD5E1] bg-[#FFFFFF] text-[#1C1F2E] text-sm focus:outline-none focus:ring-2 focus:ring-[#4A90D9]/30 appearance-none"
+          className="w-full px-4 pt-6 pb-2.5 rounded-xl border border-[#CBD5E1] bg-[#FFFFFF] text-[#1C1F2E] text-sm focus:outline-none focus:ring-2 focus:ring-[#1D9BF0]/30 appearance-none"
         >
           <option value="">Select a range</option>
           <option>Under $10k/month</option>
@@ -106,7 +106,7 @@ export default function ContactForm() {
         <select
           value={helpWith}
           onChange={(e) => setHelpWith(e.target.value)}
-          className="w-full px-4 pt-6 pb-2.5 rounded-xl border border-[#CBD5E1] bg-[#FFFFFF] text-[#1C1F2E] text-sm focus:outline-none focus:ring-2 focus:ring-[#4A90D9]/30 appearance-none"
+          className="w-full px-4 pt-6 pb-2.5 rounded-xl border border-[#CBD5E1] bg-[#FFFFFF] text-[#1C1F2E] text-sm focus:outline-none focus:ring-2 focus:ring-[#1D9BF0]/30 appearance-none"
         >
           <option value="">What do you need help with?</option>
           <option>Facebook Ads Management</option>
@@ -119,7 +119,7 @@ export default function ContactForm() {
 
       <button
         type="submit"
-        className="w-full py-4 rounded-full bg-[#4A90D9] text-white font-bold hover:bg-[#3478C2] transition-colors active:scale-98"
+        className="w-full py-4 rounded-full bg-[#1D9BF0] text-white font-bold hover:bg-[#0F85D0] transition-colors active:scale-98"
       >
         Request a Free Strategy Call →
       </button>
@@ -144,13 +144,13 @@ function FloatingField({ id, label, type, value, error, onChange }: {
         onFocus={() => setFocused(true)}
         onBlur={() => setFocused(false)}
         className={`w-full px-4 pt-6 pb-2.5 rounded-xl border bg-[#FFFFFF] text-[#1C1F2E] text-sm focus:outline-none focus:ring-2 transition-all ${
-          error ? "border-red-400 focus:ring-red-300/30" : "border-[#CBD5E1] focus:ring-[#4A90D9]/30"
+          error ? "border-red-400 focus:ring-red-300/30" : "border-[#CBD5E1] focus:ring-[#1D9BF0]/30"
         }`}
       />
       <label
         htmlFor={id}
         className={`absolute left-4 transition-all duration-200 pointer-events-none ${
-          raised ? "top-2 text-xs text-[#4A90D9] font-medium" : "top-4 text-sm text-[#64748B]"
+          raised ? "top-2 text-xs text-[#1D9BF0] font-medium" : "top-4 text-sm text-[#64748B]"
         }`}
       >
         {label}

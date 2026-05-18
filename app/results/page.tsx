@@ -19,14 +19,14 @@ export default function Results() {
         {/* Hero */}
         <section className="relative bg-[#111318] text-white overflow-hidden py-28">
           <div className="absolute inset-0 pointer-events-none">
-            <div className="absolute top-0 right-0 w-[500px] h-[400px] rounded-full bg-[#93BCED]/8 blur-[100px]" />
+            <div className="absolute top-0 right-0 w-[500px] h-[400px] rounded-full bg-[#7DD3FC]/8 blur-[100px]" />
           </div>
           <div className="relative max-w-5xl mx-auto px-6">
             <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-              <p className="text-[#93BCED] font-semibold text-sm uppercase tracking-widest mb-4">Results</p>
+              <p className="text-[#7DD3FC] font-semibold text-sm uppercase tracking-widest mb-4">Results</p>
               <h1 className="font-display text-6xl md:text-7xl font-black leading-none mb-6">
                 Real numbers.<br />
-                <em className="not-italic text-[#4A90D9]">Real businesses.</em>
+                <em className="not-italic text-[#1D9BF0]">Real businesses.</em>
               </h1>
               <p className="text-white/55 text-xl max-w-2xl leading-relaxed">
                 We let the results speak. Here's what local businesses have achieved running campaigns with Drevscale Media.
@@ -74,7 +74,7 @@ export default function Results() {
               viewport={{ once: true }}
               className="mb-14"
             >
-              <p className="text-[#4A90D9] font-semibold text-sm uppercase tracking-widest mb-3">Case Studies</p>
+              <p className="text-[#1D9BF0] font-semibold text-sm uppercase tracking-widest mb-3">Case Studies</p>
               <h2 className="font-display text-5xl font-black text-[#1C1F2E]">The numbers behind the wins.</h2>
               <p className="text-[#64748B] mt-4 max-w-xl">Industry types shared; business names kept private per client request.</p>
             </motion.div>
@@ -97,14 +97,14 @@ export default function Results() {
         <section className="py-24 bg-[#F1F5F9] text-center">
           <div className="max-w-2xl mx-auto px-6">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-              <p className="text-[#4A90D9] font-semibold text-sm uppercase tracking-widest mb-4">Your Turn</p>
+              <p className="text-[#1D9BF0] font-semibold text-sm uppercase tracking-widest mb-4">Your Turn</p>
               <h2 className="font-display text-5xl font-black text-[#1C1F2E] mb-6">
                 Want results like these<br />for your business?
               </h2>
               <p className="text-[#64748B] text-lg mb-10">Let's talk about what's possible for your specific market and budget.</p>
               <Link
                 href="/contact"
-                className="inline-flex items-center px-10 py-5 rounded-full bg-[#4A90D9] text-white font-bold text-lg hover:bg-[#3478C2] transition-colors"
+                className="inline-flex items-center px-10 py-5 rounded-full bg-[#1D9BF0] text-white font-bold text-lg hover:bg-[#0F85D0] transition-colors"
               >
                 Book a Free Strategy Call →
               </Link>

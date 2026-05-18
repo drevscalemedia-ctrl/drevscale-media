@@ -16,7 +16,7 @@ export default function MeetCarter() {
             viewport={{ once: true }}
             className="relative"
           >
-            <div className="aspect-[4/5] rounded-3xl overflow-hidden bg-gradient-to-br from-[#1C1F2E] via-[#2d3348] to-[#4A90D9]/40 flex items-end">
+            <div className="aspect-[4/5] rounded-3xl overflow-hidden bg-gradient-to-br from-[#1C1F2E] via-[#2d3348] to-[#1D9BF0]/40 flex items-end">
               {/* Portrait area */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center">
@@ -42,7 +42,7 @@ export default function MeetCarter() {
               className="absolute -right-4 top-8 bg-white rounded-2xl p-4 shadow-lg border border-[#CBD5E1]"
             >
               <div className="flex items-center gap-2 text-sm font-semibold text-[#1C1F2E]">
-                <MapPin size={14} className="text-[#4A90D9]" />
+                <MapPin size={14} className="text-[#1D9BF0]" />
                 Fountain Hills, AZ
               </div>
             </motion.div>
@@ -55,7 +55,7 @@ export default function MeetCarter() {
               className="absolute -left-4 bottom-24 bg-white rounded-2xl p-4 shadow-lg border border-[#CBD5E1]"
             >
               <div className="flex items-center gap-2 text-sm font-semibold text-[#1C1F2E]">
-                <Clock size={14} className="text-[#4A90D9]" />
+                <Clock size={14} className="text-[#1D9BF0]" />
                 Replies within 4 hours
               </div>
             </motion.div>
@@ -67,9 +67,9 @@ export default function MeetCarter() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <p className="text-[#4A90D9] font-semibold text-sm uppercase tracking-widest mb-4">Meet Your Marketer</p>
+            <p className="text-[#1D9BF0] font-semibold text-sm uppercase tracking-widest mb-4">Meet Your Marketer</p>
             <h2 className="font-display text-5xl font-black text-[#1C1F2E] leading-tight mb-6">
-              You'll work with<br />Carter. <em className="not-italic text-[#4A90D9]">Directly.</em>
+              You'll work with<br />Carter. <em className="not-italic text-[#1D9BF0]">Directly.</em>
             </h2>
 
             <div className="space-y-4 text-[#64748B] leading-relaxed mb-8">
@@ -87,7 +87,7 @@ export default function MeetCarter() {
               ].map(({ icon: Icon, text }) => (
                 <div key={text} className="flex items-center gap-3 text-sm text-[#1C1F2E]">
                   <div className="w-8 h-8 rounded-lg bg-[#F1F5F9] flex items-center justify-center flex-shrink-0">
-                    <Icon size={14} className="text-[#4A90D9]" />
+                    <Icon size={14} className="text-[#1D9BF0]" />
                   </div>
                   {text}
                 </div>
