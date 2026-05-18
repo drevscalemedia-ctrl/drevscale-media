@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { motion } from "framer-motion";
 
 const links = [
   { href: "/services", label: "Services" },
@@ -18,9 +19,14 @@ export default function Navbar() {
       <div className="max-w-5xl mx-auto">
         {/* Pill container */}
         <div className="flex items-center justify-between px-5 py-3 rounded-2xl bg-[#0A0A0A]/80 backdrop-blur-xl border border-white/[0.07]">
-          <Link href="/" aria-label="Drevscale Media home">
-            <LogoWordmark />
-          </Link>
+          <motion.div
+            whileHover={{ filter: "drop-shadow(0 0 10px rgba(29,155,240,0.75))" }}
+            transition={{ duration: 0.2 }}
+          >
+            <Link href="/" aria-label="Drevscale Media home">
+              <LogoWordmark />
+            </Link>
+          </motion.div>
 
           {/* Desktop links */}
           <div className="hidden md:flex items-center gap-7">
