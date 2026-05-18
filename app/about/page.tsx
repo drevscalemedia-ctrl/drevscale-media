@@ -6,6 +6,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import StickyMobileCTA from "@/components/StickyMobileCTA";
 import MeetCarter from "@/components/MeetCarter";
+import LightSectionOrbs from "@/components/LightSectionOrbs";
 
 const values = [
   {
@@ -103,8 +104,9 @@ export default function About() {
         </section>
 
         {/* Comparison */}
-        <section className="py-24 bg-[#FFFFFF]">
-          <div className="max-w-4xl mx-auto px-6">
+        <section className="relative py-24 bg-[#FFFFFF] overflow-hidden">
+          <LightSectionOrbs />
+          <div className="relative max-w-4xl mx-auto px-6">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -163,8 +165,9 @@ export default function About() {
         </section>
 
         {/* CTA */}
-        <section className="py-24 bg-[#F1F5F9] text-center">
-          <div className="max-w-2xl mx-auto px-6">
+        <section className="relative py-24 bg-[#F1F5F9] text-center overflow-hidden">
+          <LightSectionOrbs />
+          <div className="relative max-w-2xl mx-auto px-6">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
               <p className="text-[#1D9BF0] font-semibold text-sm uppercase tracking-widest mb-4">Work With Me</p>
               <h2 className="font-display text-5xl font-black text-[#1C1F2E] mb-6">

@@ -14,6 +14,7 @@ import MeetCarter from "@/components/MeetCarter";
 import SocialProofBar from "@/components/SocialProofBar";
 import Testimonials from "@/components/Testimonials";
 import { BRAND } from "@/lib/content";
+import LightSectionOrbs from "@/components/LightSectionOrbs";
 
 export default function Home() {
   return (
@@ -138,8 +139,9 @@ export default function Home() {
         </section>
 
         {/* ── Services ─────────────────────────────────────── */}
-        <section className="py-28 bg-white">
-          <div className="max-w-5xl mx-auto px-6">
+        <section className="relative py-28 bg-white overflow-hidden">
+          <LightSectionOrbs />
+          <div className="relative max-w-5xl mx-auto px-6">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -165,8 +167,9 @@ export default function Home() {
         <ROICalculator />
 
         {/* ── Industry Grid ────────────────────────────────── */}
-        <section className="py-28 bg-white">
-          <div className="max-w-5xl mx-auto px-6">
+        <section className="relative py-28 bg-white overflow-hidden">
+          <LightSectionOrbs />
+          <div className="relative max-w-5xl mx-auto px-6">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}

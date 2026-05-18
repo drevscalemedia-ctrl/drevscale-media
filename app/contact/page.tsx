@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
 import { BRAND } from "@/lib/content";
+import LightSectionOrbs from "@/components/LightSectionOrbs";
 
 const paymentMethods = [
   { label: "Zelle", handle: BRAND.phone, color: "#6B33C8" },
@@ -38,8 +39,9 @@ export default function Contact() {
         </section>
 
         {/* Contact section */}
-        <section className="py-24 bg-[#FFFFFF]">
-          <div className="max-w-5xl mx-auto px-6">
+        <section className="relative py-24 bg-[#FFFFFF] overflow-hidden">
+          <LightSectionOrbs />
+          <div className="relative max-w-5xl mx-auto px-6">
             <div className="grid md:grid-cols-2 gap-16 items-start">
               {/* Left: contact info */}
               <motion.div

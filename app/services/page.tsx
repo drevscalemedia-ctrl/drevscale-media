@@ -8,6 +8,7 @@ import ServiceCard from "@/components/ServiceCard";
 import FAQ from "@/components/FAQ";
 import HowItWorks from "@/components/HowItWorks";
 import { PRICING } from "@/lib/content";
+import LightSectionOrbs from "@/components/LightSectionOrbs";
 
 export default function Services() {
   return (
@@ -35,8 +36,9 @@ export default function Services() {
         </section>
 
         {/* Service Cards */}
-        <section className="py-28 bg-white">
-          <div className="max-w-5xl mx-auto px-6">
+        <section className="relative py-28 bg-white overflow-hidden">
+          <LightSectionOrbs />
+          <div className="relative max-w-5xl mx-auto px-6">
             <div className="grid md:grid-cols-2 gap-6 mb-16">
               <ServiceCard type="facebook" />
               <ServiceCard type="web" />
