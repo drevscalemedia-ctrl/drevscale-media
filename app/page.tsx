@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import StickyMobileCTA from "@/components/StickyMobileCTA";
 import AnimatedCounter from "@/components/AnimatedCounter";
+import InteractiveDotCanvas from "@/components/InteractiveDotCanvas";
 import ServiceCard from "@/components/ServiceCard";
 import HowItWorks from "@/components/HowItWorks";
 import ROICalculator from "@/components/ROICalculator";
@@ -24,17 +25,8 @@ export default function Home() {
         {/* ── Hero ─────────────────────────────────────────── */}
         <section className="relative bg-[#0A0A0A] text-white overflow-hidden min-h-screen flex items-center justify-center">
 
-          {/* Dot grid background */}
-          <div className="absolute inset-0 pointer-events-none" style={{ opacity: 0.25 }}>
-            <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <pattern id="hero-dots" x="0" y="0" width="32" height="32" patternUnits="userSpaceOnUse">
-                  <circle cx="1" cy="1" r="1" fill="rgba(255,255,255,0.5)" />
-                </pattern>
-              </defs>
-              <rect width="100%" height="100%" fill="url(#hero-dots)" />
-            </svg>
-          </div>
+          {/* Interactive dot canvas — replaces static SVG grid */}
+          <InteractiveDotCanvas />
 
           {/* Blue radial glow — off-center left, suggests upward momentum */}
           <div

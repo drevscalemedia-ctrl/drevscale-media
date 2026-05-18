@@ -35,7 +35,7 @@ export default function Navbar() {
             ))}
             <Link
               href="/contact"
-              className="px-5 py-2 rounded-xl bg-[#1D9BF0] text-white text-sm font-semibold hover:bg-[#0F85D0] transition-colors"
+              className="px-5 py-2 rounded-xl bg-[#1D9BF0] text-[#FFFFFF] text-sm font-semibold hover:bg-[#0F85D0] transition-colors"
               style={{ boxShadow: "0 0 20px rgba(29,155,240,0.3)" }}
             >
               Book a Call
