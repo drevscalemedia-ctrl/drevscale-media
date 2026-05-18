@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
 const links = [
@@ -12,99 +12,85 @@ const links = [
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40);
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   return (
-    <nav
-      className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${
-        scrolled
-          ? "bg-white/95 backdrop-blur-md shadow-sm border-b border-black/5"
-          : "bg-gradient-to-b from-black/50 via-black/20 to-transparent"
-      }`}
-      aria-label="Main navigation"
-    >
-      <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        <Link href="/" aria-label="Drevscale Media home">
-          <LogoWordmark scrolled={scrolled} />
-        </Link>
-
-        <div className="hidden md:flex items-center gap-8">
-          {links.map((l) => (
-            <Link
-              key={l.href}
-              href={l.href}
-              className={`text-sm font-medium transition-colors hover:text-[#4A90D9] ${
-                scrolled ? "text-[#1C1F2E]/70" : "text-white/80"
-              }`}
-            >
-              {l.label}
-            </Link>
-          ))}
-          <Link
-            href="/contact"
-            className={`px-5 py-2.5 rounded-full text-sm font-semibold transition-all ${
-              scrolled
-                ? "bg-[#4A90D9] text-white hover:bg-[#3478C2]"
-                : "bg-white/15 text-white border border-white/30 hover:bg-white/25 backdrop-blur-sm"
-            }`}
-          >
-            Book a Free Call
+    <nav className="fixed top-5 inset-x-0 z-50 px-4 md:px-6">
+      <div className="max-w-5xl mx-auto">
+        {/* Pill container */}
+        <div className="flex items-center justify-between px-5 py-3 rounded-2xl bg-[#0A0A0A]/80 backdrop-blur-xl border border-white/[0.07]">
+          <Link href="/" aria-label="Drevscale Media home">
+            <LogoWordmark />
           </Link>
+
+          {/* Desktop links */}
+          <div className="hidden md:flex items-center gap-7">
+            {links.map((l) => (
+              <Link
+                key={l.href}
+                href={l.href}
+                className="text-sm text-[#9CA3AF] hover:text-[#F5F5F5] transition-colors font-medium"
+              >
+                {l.label}
+              </Link>
+            ))}
+            <Link
+              href="/contact"
+              className="px-5 py-2 rounded-xl bg-[#3B82F6] text-white text-sm font-semibold hover:bg-[#2563EB] transition-colors"
+              style={{ boxShadow: "0 0 20px rgba(59,130,246,0.3)" }}
+            >
+              Book a Call
+            </Link>
+          </div>
+
+          {/* Mobile toggle */}
+          <button
+            onClick={() => setOpen(!open)}
+            className="md:hidden text-[#9CA3AF] hover:text-white transition-colors p-1"
+            aria-label={open ? "Close menu" : "Open menu"}
+          >
+            {open ? <X size={20} /> : <Menu size={20} />}
+          </button>
         </div>
 
-        <button
-          onClick={() => setOpen(!open)}
-          className={`md:hidden p-2 transition-colors ${scrolled ? "text-[#1C1F2E]" : "text-white"}`}
-          aria-label={open ? "Close menu" : "Open menu"}
-          aria-expanded={open}
-        >
-          {open ? <X size={22} /> : <Menu size={22} />}
-        </button>
-      </div>
-
-      {open && (
-        <div className="md:hidden bg-white border-t border-black/5 px-6 py-6 space-y-4 shadow-lg">
-          {links.map((l) => (
+        {/* Mobile drawer */}
+        {open && (
+          <div className="mt-2 rounded-2xl bg-[#0A0A0A]/95 border border-white/[0.07] px-5 py-5 space-y-4 backdrop-blur-xl">
+            {links.map((l) => (
+              <Link
+                key={l.href}
+                href={l.href}
+                className="block text-sm text-[#9CA3AF] hover:text-white transition-colors font-medium py-1"
+                onClick={() => setOpen(false)}
+              >
+                {l.label}
+              </Link>
+            ))}
             <Link
-              key={l.href}
-              href={l.href}
-              className="block text-base font-medium text-[#1C1F2E]/70 hover:text-[#4A90D9] transition-colors"
+              href="/contact"
+              className="block text-center py-3 rounded-xl bg-[#3B82F6] text-white font-semibold text-sm hover:bg-[#2563EB] transition-colors"
               onClick={() => setOpen(false)}
+              style={{ boxShadow: "0 0 20px rgba(59,130,246,0.25)" }}
             >
-              {l.label}
+              Book a Call
             </Link>
-          ))}
-          <Link
-            href="/contact"
-            className="block text-center py-3.5 rounded-full bg-[#4A90D9] text-white font-semibold hover:bg-[#3478C2] transition-colors"
-            onClick={() => setOpen(false)}
-          >
-            Book a Free Call
-          </Link>
-        </div>
-      )}
+          </div>
+        )}
+      </div>
     </nav>
   );
 }
 
-function LogoWordmark({ scrolled }: { scrolled: boolean }) {
-  const c = scrolled ? "#1C1F2E" : "#FFFFFF";
+function LogoWordmark() {
   return (
-    <svg width="160" height="40" viewBox="0 0 160 40" fill="none" aria-label="Drevscale Media">
-      {/* Chart arrow — floats above the wordmark */}
-      <polyline points="42,11 48,5 54,8 61,1" stroke={c} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-      <polyline points="58,1 61,1 61,4" stroke={c} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-      {/* Single text node with tspan — natural character spacing, no gaps */}
+    <svg width="155" height="36" viewBox="0 0 160 40" fill="none" aria-label="Drevscale Media">
+      {/* Growth arrow — white on dark bg */}
+      <polyline points="42,11 48,5 54,8 61,1" stroke="#F5F5F5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      <polyline points="58,1 61,1 61,4" stroke="#F5F5F5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      {/* Wordmark — white text, blue V */}
       <text x="0" y="30" fontFamily="var(--font-geist-sans),-apple-system,sans-serif" fontWeight="800" fontSize="24" letterSpacing="-0.5">
-        <tspan fill={c}>dre</tspan><tspan fill="#4A90D9">v</tspan><tspan fill={c}>scale</tspan>
+        <tspan fill="#F5F5F5">dre</tspan><tspan fill="#3B82F6">v</tspan><tspan fill="#F5F5F5">scale</tspan>
       </text>
-      <text x="53" y="40" fontFamily="var(--font-geist-sans),-apple-system,sans-serif" fontWeight="600" fontSize="8" letterSpacing="3" fill={c} opacity="0.45" textAnchor="middle">MEDIA</text>
+      <text x="53" y="40" fontFamily="var(--font-geist-sans),-apple-system,sans-serif" fontWeight="600" fontSize="8" letterSpacing="3" fill="#F5F5F5" opacity="0.3" textAnchor="middle">MEDIA</text>
     </svg>
   );
 }

@@ -22,66 +22,102 @@ export default function Home() {
       <main>
 
         {/* ── Hero ─────────────────────────────────────────── */}
-        <section className="relative bg-[#111318] text-white overflow-hidden min-h-screen flex items-center">
-          {/* Ambient glow orbs */}
-          <div className="absolute -top-40 -left-40 w-[700px] h-[700px] rounded-full bg-[#4A90D9]/15 blur-[140px] pointer-events-none" />
-          <div className="absolute bottom-0 right-0 w-[500px] h-[500px] rounded-full bg-[#93C5FD]/10 blur-[120px] pointer-events-none" />
+        <section className="relative bg-[#0A0A0A] text-white overflow-hidden min-h-screen flex items-center justify-center">
 
-          <div className="relative max-w-5xl mx-auto px-6 py-40">
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-            >
-              {/* Scarcity badge */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.15 }}
-                className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-[#93C5FD]/25 bg-[#93C5FD]/10 text-[#93C5FD] text-sm font-semibold mb-10"
-              >
-                <span className="w-1.5 h-1.5 rounded-full bg-[#93C5FD] animate-pulse" />
-                {BRAND.scarcity}
-              </motion.div>
-
-              <h1 className="font-display text-7xl md:text-[96px] font-black leading-[0.95] mb-8 tracking-tight">
-                More Leads.<br />
-                <em className="not-italic text-[#4A90D9]">More Customers.</em>
-              </h1>
-
-              <p className="text-white/55 text-xl md:text-2xl max-w-xl mb-12 leading-relaxed">
-                Facebook & Instagram ads for local businesses in{" "}
-                <span className="text-white/90 font-medium">Fountain Hills & Scottsdale</span>.
-                Done-for-you. Zero guesswork.
-              </p>
-
-              <div className="flex flex-wrap gap-4">
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center px-9 py-5 rounded-full bg-[#4A90D9] text-white font-bold text-lg hover:bg-[#3478C2] transition-colors shadow-2xl shadow-[#4A90D9]/25"
-                >
-                  Book a Free Strategy Call →
-                </Link>
-                <Link
-                  href="/results"
-                  className="inline-flex items-center px-9 py-5 rounded-full border border-white/15 text-white/80 font-semibold text-lg hover:bg-white/8 hover:text-white transition-colors"
-                >
-                  See Real Results
-                </Link>
-              </div>
-
-              <div className="flex flex-wrap items-center gap-6 mt-14 text-sm text-white/30">
-                <span>📍 Fountain Hills, AZ</span>
-                <span className="w-px h-4 bg-white/15" />
-                <span>No contracts. Month-to-month.</span>
-                <span className="w-px h-4 bg-white/15" />
-                <span>Campaigns live in 48 hrs</span>
-              </div>
-            </motion.div>
+          {/* Dot grid background */}
+          <div className="absolute inset-0 pointer-events-none" style={{ opacity: 0.25 }}>
+            <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <pattern id="hero-dots" x="0" y="0" width="32" height="32" patternUnits="userSpaceOnUse">
+                  <circle cx="1" cy="1" r="1" fill="rgba(255,255,255,0.5)" />
+                </pattern>
+              </defs>
+              <rect width="100%" height="100%" fill="url(#hero-dots)" />
+            </svg>
           </div>
 
-          {/* Scroll fade */}
-          <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#111318] to-transparent pointer-events-none" />
+          {/* Blue radial glow — off-center left, suggests upward momentum */}
+          <div
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              background: "radial-gradient(ellipse 900px 700px at 38% 55%, rgba(59,130,246,0.14) 0%, transparent 65%)",
+            }}
+          />
+
+          {/* Subtle vignette fade at edges */}
+          <div className="absolute inset-0 pointer-events-none bg-gradient-to-b from-[#0A0A0A] via-transparent to-[#0A0A0A] opacity-60" />
+
+          <div className="relative text-center max-w-4xl mx-auto px-6 pt-36 pb-40">
+
+            {/* Eyebrow */}
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#3B82F6]/25 bg-[#3B82F6]/[0.08] text-[#3B82F6] text-xs font-semibold uppercase tracking-widest mb-9"
+            >
+              <span className="w-1.5 h-1.5 rounded-full bg-[#3B82F6] animate-pulse" />
+              {BRAND.scarcity}
+            </motion.div>
+
+            {/* Headline */}
+            <motion.h1
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.08 }}
+              className="text-[68px] md:text-[88px] font-black leading-[1.02] tracking-[-0.03em] text-[#F5F5F5] mb-7"
+            >
+              More Leads.<br />
+              <span className="text-[#3B82F6]">More Customers.</span>
+            </motion.h1>
+
+            {/* Subheading */}
+            <motion.p
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.16 }}
+              className="text-[18px] leading-relaxed text-[#9CA3AF] max-w-lg mx-auto mb-12"
+            >
+              Facebook & Instagram ads for local businesses in Fountain Hills &
+              Scottsdale. Done-for-you. Zero guesswork.
+            </motion.p>
+
+            {/* CTAs */}
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.24 }}
+              className="flex items-center justify-center gap-4 flex-wrap"
+            >
+              <Link
+                href="/contact"
+                className="inline-flex items-center px-8 py-4 rounded-xl bg-[#3B82F6] text-white font-semibold text-sm hover:bg-[#2563EB] transition-colors"
+                style={{ boxShadow: "0 0 40px rgba(59,130,246,0.35)" }}
+              >
+                Book a Free Strategy Call →
+              </Link>
+              <Link
+                href="/results"
+                className="inline-flex items-center px-8 py-4 rounded-xl border border-white/10 bg-white/[0.04] text-white/70 font-semibold text-sm hover:bg-white/[0.08] hover:text-white transition-colors"
+              >
+                See Real Results
+              </Link>
+            </motion.div>
+
+            {/* Trust micro-copy */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.45 }}
+              className="flex items-center justify-center gap-6 mt-14 text-xs text-[#9CA3AF]/50 flex-wrap"
+            >
+              <span>📍 Fountain Hills, AZ</span>
+              <span className="w-px h-3 bg-white/10" />
+              <span>No contracts. Month-to-month.</span>
+              <span className="w-px h-3 bg-white/10" />
+              <span>Campaigns live in 48 hrs</span>
+            </motion.div>
+          </div>
         </section>
 
         {/* ── Stats bar ────────────────────────────────────── */}
