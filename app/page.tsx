@@ -1,142 +1,201 @@
 "use client";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import Link from "next/link";
-
-const businessTypes = [
-  "Dental Practices", "Med Spas", "Gyms & Fitness", "HVAC & Home Services",
-  "Restaurants", "Chiropractic", "Real Estate", "Auto Repair"
-];
+import StickyMobileCTA from "@/components/StickyMobileCTA";
+import AnimatedCounter from "@/components/AnimatedCounter";
+import ServiceCard from "@/components/ServiceCard";
+import HowItWorks from "@/components/HowItWorks";
+import ROICalculator from "@/components/ROICalculator";
+import IndustryGrid from "@/components/IndustryGrid";
+import MeetCarter from "@/components/MeetCarter";
+import SocialProofBar from "@/components/SocialProofBar";
+import Testimonials from "@/components/Testimonials";
+import { BRAND } from "@/lib/content";
 
 export default function Home() {
   return (
     <>
       <Navbar />
+      <StickyMobileCTA />
       <main>
         {/* Hero */}
-        <section className="bg-[#1E2330] text-white py-24 md:py-32">
-          <div className="max-w-5xl mx-auto px-6">
-            <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-[#4A90D9]/40 bg-[#4A90D9]/10 text-[#4A90D9] text-sm font-medium mb-8">
-                📍 Serving Fountain Hills & Scottsdale, AZ
-              </div>
-              <h1 className="text-5xl md:text-6xl font-black leading-tight mb-6 max-w-3xl">
-                More Leads. More Customers.{" "}
-                <span className="text-[#4A90D9]">Facebook Ads</span> Built for Local Businesses.
+        <section className="relative bg-[#1C1F2E] text-white overflow-hidden min-h-[90vh] flex items-center">
+          {/* Gradient glow */}
+          <div className="absolute inset-0 pointer-events-none">
+            <div className="absolute -top-32 -left-32 w-[600px] h-[600px] rounded-full bg-[#C8522A]/10 blur-[120px]" />
+            <div className="absolute bottom-0 right-0 w-[400px] h-[400px] rounded-full bg-[#E8A848]/8 blur-[100px]" />
+          </div>
+          {/* Grain overlay */}
+          <div className="absolute inset-0 grain-overlay opacity-30" />
+
+          <div className="relative max-w-5xl mx-auto px-6 py-32">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            >
+              {/* Scarcity badge */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.2 }}
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#E8A848]/30 bg-[#E8A848]/10 text-[#E8A848] text-sm font-semibold mb-8"
+              >
+                <span className="w-2 h-2 rounded-full bg-[#E8A848] animate-pulse" />
+                {BRAND.scarcity}
+              </motion.div>
+
+              <h1 className="font-display text-6xl md:text-8xl font-black leading-none mb-8 max-w-4xl">
+                More Leads.<br />
+                <em className="not-italic text-[#C8522A]">More Customers.</em>
               </h1>
-              <p className="text-white/60 text-xl max-w-2xl mb-10 leading-relaxed">
-                Drevscale Media runs done-for-you Facebook and Instagram ad campaigns that put your business in front of the right people — locally, consistently, and affordably.
+
+              <p className="text-white/60 text-xl md:text-2xl max-w-2xl mb-10 leading-relaxed">
+                Facebook & Instagram ads built for local businesses in{" "}
+                <span className="text-white/90">Fountain Hills and Scottsdale</span>.
+                Done-for-you. Results-focused.
               </p>
+
               <div className="flex flex-wrap gap-4">
-                <Link href="/contact" className="px-8 py-4 rounded-full font-bold bg-[#4A90D9] text-white hover:bg-[#3a7bc8] transition-colors shadow-lg">
-                  Book a Free Strategy Call
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center px-10 py-5 rounded-full bg-[#C8522A] text-white font-bold text-lg hover:bg-[#A8432A] transition-colors shadow-xl shadow-[#C8522A]/30"
+                >
+                  Book a Free Strategy Call →
                 </Link>
-                <Link href="/services" className="px-8 py-4 rounded-full font-bold border border-white/20 text-white hover:bg-white/5 transition-colors">
-                  See Our Services
+                <Link
+                  href="/results"
+                  className="inline-flex items-center px-10 py-5 rounded-full border border-white/20 text-white font-bold text-lg hover:bg-white/5 transition-colors"
+                >
+                  See Real Results
                 </Link>
+              </div>
+
+              {/* Trust signals */}
+              <div className="flex flex-wrap items-center gap-6 mt-12 text-sm text-white/35">
+                <span>📍 Fountain Hills, AZ</span>
+                <span className="w-px h-4 bg-white/20" />
+                <span>No contracts. Month-to-month.</span>
+                <span className="w-px h-4 bg-white/20" />
+                <span>Campaigns live in 48hrs</span>
               </div>
             </motion.div>
           </div>
         </section>
 
         {/* Stats bar */}
-        <section className="bg-[#4A90D9]">
-          <div className="max-w-5xl mx-auto px-6 py-10 grid grid-cols-2 md:grid-cols-4 gap-6 text-white text-center">
-            {[["$0", "Hidden Fees"], ["48hr", "Campaign Launch"], ["100%", "Transparent Reporting"], ["Local", "Fountain Hills Based"]].map(([val, label]) => (
-              <div key={label}>
-                <div className="text-2xl font-black">{val}</div>
-                <div className="text-white/80 text-sm mt-1">{label}</div>
-              </div>
-            ))}
+        <section className="bg-[#C8522A]">
+          <div className="max-w-5xl mx-auto px-6 py-12 grid grid-cols-2 md:grid-cols-4 gap-8 text-white text-center">
+            {[
+              { end: 15, suffix: "+", label: "Campaigns Run" },
+              { end: 8, prefix: "$", suffix: "–$15", label: "Avg. Cost Per Lead", raw: true },
+              { end: 48, suffix: "hr", label: "Campaign Launch" },
+              { end: 3, suffix: "x", label: "Average ROAS" },
+            ].map((stat, i) =>
+              stat.raw ? (
+                <motion.div
+                  key={stat.label}
+                  initial={{ opacity: 0, y: 16 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.08 }}
+                >
+                  <div className="font-display text-4xl md:text-5xl font-black leading-none">$8–$15</div>
+                  <div className="text-white/75 text-sm mt-2">{stat.label}</div>
+                </motion.div>
+              ) : (
+                <motion.div
+                  key={stat.label}
+                  initial={{ opacity: 0, y: 16 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.08 }}
+                >
+                  <div className="font-display text-4xl md:text-5xl font-black leading-none">
+                    <AnimatedCounter end={stat.end} prefix={stat.prefix} suffix={stat.suffix} />
+                  </div>
+                  <div className="text-white/75 text-sm mt-2">{stat.label}</div>
+                </motion.div>
+              )
+            )}
           </div>
         </section>
 
         {/* Services */}
-        <section className="py-24 bg-white">
+        <section className="py-24 bg-[#FAF7F2]">
           <div className="max-w-5xl mx-auto px-6">
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-14">
-              <p className="text-[#4A90D9] font-semibold text-sm uppercase tracking-widest mb-3">What We Do</p>
-              <h2 className="text-4xl font-black text-[#1E2330]">Two services. One goal: more customers.</h2>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="mb-14"
+            >
+              <p className="text-[#C8522A] font-semibold text-sm uppercase tracking-widest mb-3">What We Do</p>
+              <h2 className="font-display text-5xl font-black text-[#1C1F2E]">Two services.<br />One goal: more customers.</h2>
             </motion.div>
-            <div className="grid md:grid-cols-2 gap-8">
-              <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="p-8 rounded-2xl bg-[#ECEEF1] border border-gray-200 hover:border-[#4A90D9]/40 transition-colors">
-                <div className="w-12 h-12 rounded-xl bg-[#4A90D9]/10 flex items-center justify-center text-2xl mb-6">📣</div>
-                <h3 className="text-2xl font-black text-[#1E2330] mb-3">Facebook Ads Management</h3>
-                <p className="text-[#1E2330]/60 mb-6 leading-relaxed">Done-for-you Facebook and Instagram campaigns. We build it, run it, optimize it, and report on it every month. You just answer the leads.</p>
-                <div className="space-y-2 text-sm text-[#1E2330]/70 mb-8">
-                  {["$250 one-time setup fee", "$400–$650/month management", "$400–$500/month ad spend (paid to Facebook)", "Full setup, targeting, copy, and reporting included"].map(f => (
-                    <div key={f} className="flex items-start gap-2"><span className="text-[#4A90D9] mt-0.5">✓</span> {f}</div>
-                  ))}
-                </div>
-                <Link href="/services#facebook-ads" className="font-semibold text-[#4A90D9] hover:underline">Learn more →</Link>
-              </motion.div>
-
-              <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="p-8 rounded-2xl bg-[#ECEEF1] border border-gray-200 hover:border-[#4A90D9]/40 transition-colors">
-                <div className="w-12 h-12 rounded-xl bg-[#4A90D9]/10 flex items-center justify-center text-2xl mb-6">💻</div>
-                <h3 className="text-2xl font-black text-[#1E2330] mb-3">Website Design & Hosting</h3>
-                <p className="text-[#1E2330]/60 mb-6 leading-relaxed">Clean, mobile-first websites built to turn visitors into leads. Designed to look great and load fast — exactly what local business owners need.</p>
-                <div className="space-y-2 text-sm text-[#1E2330]/70 mb-8">
-                  {["Custom build fee (project-based)", "$50–$80/month hosting & maintenance", "Mobile-optimized and SEO-ready", "Includes ongoing minor updates"].map(f => (
-                    <div key={f} className="flex items-start gap-2"><span className="text-[#4A90D9] mt-0.5">✓</span> {f}</div>
-                  ))}
-                </div>
-                <Link href="/services#web-design" className="font-semibold text-[#4A90D9] hover:underline">Learn more →</Link>
-              </motion.div>
+            <div className="grid md:grid-cols-2 gap-6">
+              <ServiceCard type="facebook" />
+              <ServiceCard type="web" />
             </div>
           </div>
         </section>
 
-        {/* Who we help */}
-        <section className="py-24 bg-[#ECEEF1]">
+        {/* How It Works */}
+        <HowItWorks />
+
+        {/* ROI Calculator */}
+        <ROICalculator />
+
+        {/* Industry Grid */}
+        <section className="py-24 bg-[#FAF7F2]">
           <div className="max-w-5xl mx-auto px-6">
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
-              <p className="text-[#4A90D9] font-semibold text-sm uppercase tracking-widest mb-3">Who We Help</p>
-              <h2 className="text-4xl font-black text-[#1E2330]">Built for local businesses.</h2>
-              <p className="text-[#1E2330]/50 mt-3 text-lg max-w-xl mx-auto">If you have customers in Fountain Hills or Scottsdale, we can get you more of them.</p>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-14"
+            >
+              <p className="text-[#C8522A] font-semibold text-sm uppercase tracking-widest mb-3">Industries We Serve</p>
+              <h2 className="font-display text-5xl font-black text-[#1C1F2E]">Does this work for<br />your type of business?</h2>
+              <p className="text-[#7A6E65] mt-4 text-lg max-w-xl mx-auto">Hover each tile to see average results. Every industry has its own cost per lead — yours might surprise you.</p>
             </motion.div>
-            <div className="flex flex-wrap justify-center gap-3">
-              {businessTypes.map((b, i) => (
-                <motion.span key={b} initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ delay: i * 0.05 }} className="px-5 py-2.5 rounded-full bg-white border border-gray-200 text-[#1E2330] font-medium text-sm shadow-sm">
-                  {b}
-                </motion.span>
-              ))}
-            </div>
+            <IndustryGrid />
           </div>
         </section>
 
-        {/* Why Drevscale */}
-        <section className="py-24 bg-[#1E2330] text-white">
-          <div className="max-w-5xl mx-auto px-6">
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-14">
-              <p className="text-[#4A90D9] font-semibold text-sm uppercase tracking-widest mb-3">Why Drevscale Media</p>
-              <h2 className="text-4xl font-black">Not a big agency. Better.</h2>
-            </motion.div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {[
-                { icon: "📍", title: "Local to Your Market", desc: "We know Fountain Hills and Scottsdale. We target your neighbors, not random zip codes." },
-                { icon: "👤", title: "Owner-Operated", desc: "Carter manages every account personally. You'll never get handed off to a junior rep." },
-                { icon: "💰", title: "Transparent Pricing", desc: "No contracts, no hidden fees. You know exactly what you're paying and what you get." },
-                { icon: "🎯", title: "Results-Focused", desc: "If your leads aren't flowing, we adjust — not make excuses. Your growth is our track record." },
-              ].map((item, i) => (
-                <motion.div key={item.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="p-6 rounded-2xl border border-white/10 bg-white/5">
-                  <span className="text-3xl mb-4 block">{item.icon}</span>
-                  <h3 className="font-bold mb-2">{item.title}</h3>
-                  <p className="text-white/50 text-sm leading-relaxed">{item.desc}</p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
+        {/* Social Proof Bar */}
+        <SocialProofBar />
 
-        {/* CTA */}
-        <section className="py-20 bg-white">
-          <div className="max-w-3xl mx-auto px-6 text-center">
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-              <h2 className="text-4xl font-black text-[#1E2330] mb-4">Ready to get more customers?</h2>
-              <p className="text-[#1E2330]/50 text-lg mb-8">Book a free 20-minute strategy call. No pitch, no pressure — just an honest look at what's possible for your business.</p>
-              <Link href="/contact" className="inline-flex items-center px-10 py-4 rounded-full font-bold bg-[#4A90D9] text-white hover:bg-[#3a7bc8] transition-colors text-lg shadow-lg">
-                Book Your Free Call →
+        {/* Meet Carter */}
+        <MeetCarter />
+
+        {/* Testimonials */}
+        <Testimonials />
+
+        {/* Mid-page CTA */}
+        <section className="py-24 bg-[#1C1F2E] text-white text-center relative overflow-hidden">
+          <div className="absolute inset-0 pointer-events-none">
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] rounded-full bg-[#C8522A]/12 blur-[80px]" />
+          </div>
+          <div className="relative max-w-2xl mx-auto px-6">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+            >
+              <p className="text-[#E8A848] font-semibold text-sm uppercase tracking-widest mb-4">Still thinking?</p>
+              <h2 className="font-display text-5xl md:text-6xl font-black leading-tight mb-6">
+                The call is free.<br />
+                <em className="not-italic text-[#C8522A]">The results aren't.</em>
+              </h2>
+              <p className="text-white/50 text-lg mb-10">20 minutes. No pitch. Just an honest look at what Facebook ads could do for your business.</p>
+              <Link
+                href="/contact"
+                className="inline-flex items-center px-10 py-5 rounded-full bg-[#C8522A] text-white font-bold text-lg hover:bg-[#A8432A] transition-colors"
+              >
+                Book a Free Strategy Call →
               </Link>
             </motion.div>
           </div>
