@@ -69,13 +69,13 @@ export default function Footer() {
 
 function LogoWhite() {
   return (
-    <svg width="156" height="40" viewBox="0 0 156 40" fill="none">
-      <polyline points="68,12 74,6 80,9 87,2" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-      <polyline points="84,2 87,2 87,5" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-      <text x="0" y="30" fontFamily="var(--font-geist-sans),-apple-system,sans-serif" fontWeight="800" fontSize="24" letterSpacing="-0.5" fill="white">dre</text>
-      <text x="50" y="30" fontFamily="var(--font-geist-sans),-apple-system,sans-serif" fontWeight="800" fontSize="24" fill="#C8522A">v</text>
-      <text x="65" y="30" fontFamily="var(--font-geist-sans),-apple-system,sans-serif" fontWeight="800" fontSize="24" letterSpacing="-0.5" fill="white">scale</text>
-      <text x="78" y="40" fontFamily="var(--font-geist-sans),-apple-system,sans-serif" fontWeight="600" fontSize="8" letterSpacing="3.5" fill="white" opacity="0.4" textAnchor="middle">MEDIA</text>
+    <svg width="160" height="40" viewBox="0 0 160 40" fill="none">
+      <polyline points="42,11 48,5 54,8 61,1" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      <polyline points="58,1 61,1 61,4" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      <text x="0" y="30" fontFamily="var(--font-geist-sans),-apple-system,sans-serif" fontWeight="800" fontSize="24" letterSpacing="-0.5">
+        <tspan fill="white">dre</tspan><tspan fill="#C8522A">v</tspan><tspan fill="white">scale</tspan>
+      </text>
+      <text x="53" y="40" fontFamily="var(--font-geist-sans),-apple-system,sans-serif" fontWeight="600" fontSize="8" letterSpacing="3" fill="white" opacity="0.4" textAnchor="middle">MEDIA</text>
     </svg>
   );
 }
