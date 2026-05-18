@@ -39,11 +39,11 @@ export default function ServiceCard({ type }: Props) {
       />
 
       <div className="relative z-10">
-        <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 transition-colors duration-300 ${hovered ? "bg-[#C8522A]" : "bg-[#F5EFE3]"}`}>
-          <Icon size={24} className={hovered ? "text-white" : "text-[#C8522A]"} />
+        <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 transition-colors duration-300 ${hovered ? "bg-[#4A90D9]" : "bg-[#F1F5F9]"}`}>
+          <Icon size={24} className={hovered ? "text-white" : "text-[#4A90D9]"} />
         </div>
 
-        <p className={`text-xs font-semibold uppercase tracking-widest mb-2 transition-colors duration-300 ${hovered ? "text-[#E8A848]" : "text-[#C8522A]"}`}>
+        <p className={`text-xs font-semibold uppercase tracking-widest mb-2 transition-colors duration-300 ${hovered ? "text-[#93C5FD]" : "text-[#4A90D9]"}`}>
           {isFb ? "Primary Service" : "Add-on Service"}
         </p>
 
@@ -51,7 +51,7 @@ export default function ServiceCard({ type }: Props) {
           {title}
         </h3>
 
-        <p className={`text-sm leading-relaxed mb-6 transition-colors duration-300 ${hovered ? "text-white/60" : "text-[#7A6E65]"}`}>
+        <p className={`text-sm leading-relaxed mb-6 transition-colors duration-300 ${hovered ? "text-white/60" : "text-[#64748B]"}`}>
           {desc}
         </p>
 
@@ -71,7 +71,7 @@ export default function ServiceCard({ type }: Props) {
                   transition={{ delay: i * 0.05 }}
                   className="flex items-start gap-3"
                 >
-                  <CheckCircle2 size={16} className="text-[#E8A848] flex-shrink-0 mt-0.5" />
+                  <CheckCircle2 size={16} className="text-[#93C5FD] flex-shrink-0 mt-0.5" />
                   <div>
                     <span className="text-white text-sm font-semibold">{item.title}</span>
                     <span className="text-white/50 text-xs ml-2">{item.desc}</span>
@@ -84,15 +84,15 @@ export default function ServiceCard({ type }: Props) {
 
         <div className="flex items-center justify-between">
           <div>
-            <p className={`text-xs uppercase tracking-wider mb-1 transition-colors duration-300 ${hovered ? "text-white/40" : "text-[#7A6E65]"}`}>Starting from</p>
-            <p className={`font-bold text-lg transition-colors duration-300 ${hovered ? "text-[#E8A848]" : "text-[#1C1F2E]"}`}>{price}</p>
+            <p className={`text-xs uppercase tracking-wider mb-1 transition-colors duration-300 ${hovered ? "text-white/40" : "text-[#64748B]"}`}>Starting from</p>
+            <p className={`font-bold text-lg transition-colors duration-300 ${hovered ? "text-[#93C5FD]" : "text-[#1C1F2E]"}`}>{price}</p>
           </div>
           <Link
             href={href}
             className={`px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${
               hovered
-                ? "bg-[#C8522A] text-white hover:bg-[#A8432A]"
-                : "border border-[#D4C4B0] text-[#1C1F2E] hover:border-[#C8522A]"
+                ? "bg-[#4A90D9] text-white hover:bg-[#3478C2]"
+                : "border border-[#CBD5E1] text-[#1C1F2E] hover:border-[#4A90D9]"
             }`}
           >
             Learn more

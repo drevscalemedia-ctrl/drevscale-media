@@ -23,12 +23,12 @@ export default function ROICalculator() {
   }, [adSpend, industry, customerValue]);
 
   const chartData = [
-    { name: "Ad Spend (yr)", value: adSpend * 12, fill: "#D4C4B0" },
-    { name: "Revenue Impact", value: results.revenueYear, fill: "#C8522A" },
+    { name: "Ad Spend (yr)", value: adSpend * 12, fill: "#CBD5E1" },
+    { name: "Revenue Impact", value: results.revenueYear, fill: "#4A90D9" },
   ];
 
   return (
-    <section className="py-24 bg-[#FAF7F2]">
+    <section className="py-24 bg-[#FFFFFF]">
       <div className="max-w-5xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -36,11 +36,11 @@ export default function ROICalculator() {
           viewport={{ once: true }}
           className="mb-12"
         >
-          <p className="text-[#C8522A] font-semibold text-sm uppercase tracking-widest mb-3">ROI Calculator</p>
+          <p className="text-[#4A90D9] font-semibold text-sm uppercase tracking-widest mb-3">ROI Calculator</p>
           <h2 className="font-display text-5xl font-black text-[#1C1F2E] leading-tight">
-            What could your ads<br /><em className="not-italic text-[#C8522A]">actually</em> be worth?
+            What could your ads<br /><em className="not-italic text-[#4A90D9]">actually</em> be worth?
           </h2>
-          <p className="text-[#7A6E65] mt-3 text-lg max-w-xl">Adjust the sliders below to see estimated projections for your business. These are benchmarks — not guarantees.</p>
+          <p className="text-[#64748B] mt-3 text-lg max-w-xl">Adjust the sliders below to see estimated projections for your business. These are benchmarks — not guarantees.</p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-12 items-start">
@@ -48,7 +48,7 @@ export default function ROICalculator() {
           <div className="space-y-8">
             <div>
               <label className="block text-sm font-semibold text-[#1C1F2E] mb-3">
-                Monthly Ad Spend: <span className="text-[#C8522A]">${adSpend.toLocaleString()}</span>
+                Monthly Ad Spend: <span className="text-[#4A90D9]">${adSpend.toLocaleString()}</span>
               </label>
               <input
                 type="range"
@@ -57,10 +57,10 @@ export default function ROICalculator() {
                 step={50}
                 value={adSpend}
                 onChange={(e) => setAdSpend(Number(e.target.value))}
-                className="w-full h-2 rounded-full appearance-none bg-[#D4C4B0] accent-[#C8522A] cursor-pointer"
+                className="w-full h-2 rounded-full appearance-none bg-[#CBD5E1] accent-[#4A90D9] cursor-pointer"
                 aria-label="Monthly ad spend"
               />
-              <div className="flex justify-between text-xs text-[#7A6E65] mt-1"><span>$400</span><span>$2,000</span></div>
+              <div className="flex justify-between text-xs text-[#64748B] mt-1"><span>$400</span><span>$2,000</span></div>
             </div>
 
             <div>
@@ -68,7 +68,7 @@ export default function ROICalculator() {
               <select
                 value={industryIdx}
                 onChange={(e) => setIndustryIdx(Number(e.target.value))}
-                className="w-full px-4 py-3 rounded-xl border border-[#D4C4B0] bg-[#F5EFE3] text-[#1C1F2E] text-sm focus:outline-none focus:ring-2 focus:ring-[#C8522A]/30"
+                className="w-full px-4 py-3 rounded-xl border border-[#CBD5E1] bg-[#F1F5F9] text-[#1C1F2E] text-sm focus:outline-none focus:ring-2 focus:ring-[#4A90D9]/30"
               >
                 {INDUSTRIES.map((ind, i) => (
                   <option key={ind.name} value={i}>{ind.icon} {ind.name}</option>
@@ -78,7 +78,7 @@ export default function ROICalculator() {
 
             <div>
               <label className="block text-sm font-semibold text-[#1C1F2E] mb-3">
-                Avg. Customer Value: <span className="text-[#C8522A]">${customerValue.toLocaleString()}</span>
+                Avg. Customer Value: <span className="text-[#4A90D9]">${customerValue.toLocaleString()}</span>
               </label>
               <input
                 type="range"
@@ -87,10 +87,10 @@ export default function ROICalculator() {
                 step={50}
                 value={customerValue}
                 onChange={(e) => setCustomerValue(Number(e.target.value))}
-                className="w-full h-2 rounded-full appearance-none bg-[#D4C4B0] accent-[#C8522A] cursor-pointer"
+                className="w-full h-2 rounded-full appearance-none bg-[#CBD5E1] accent-[#4A90D9] cursor-pointer"
                 aria-label="Average customer value"
               />
-              <div className="flex justify-between text-xs text-[#7A6E65] mt-1"><span>$100</span><span>$5,000</span></div>
+              <div className="flex justify-between text-xs text-[#64748B] mt-1"><span>$100</span><span>$5,000</span></div>
             </div>
           </div>
 
@@ -106,14 +106,14 @@ export default function ROICalculator() {
                 <motion.div
                   key={stat.label}
                   layout
-                  className={`p-5 rounded-2xl border border-[#D4C4B0] bg-white ${stat.big ? "col-span-2" : ""}`}
+                  className={`p-5 rounded-2xl border border-[#CBD5E1] bg-white ${stat.big ? "col-span-2" : ""}`}
                 >
-                  <p className="text-xs text-[#7A6E65] uppercase tracking-wider mb-1">{stat.label}</p>
+                  <p className="text-xs text-[#64748B] uppercase tracking-wider mb-1">{stat.label}</p>
                   <motion.p
                     key={String(stat.value)}
                     initial={{ opacity: 0, y: 4 }}
                     animate={{ opacity: 1, y: 0 }}
-                    className={`font-display font-black text-[#1C1F2E] ${stat.big ? "text-4xl text-[#C8522A]" : "text-2xl"}`}
+                    className={`font-display font-black text-[#1C1F2E] ${stat.big ? "text-4xl text-[#4A90D9]" : "text-2xl"}`}
                   >
                     {stat.prefix}{stat.value.toLocaleString()}{stat.suffix}
                   </motion.p>
@@ -124,9 +124,9 @@ export default function ROICalculator() {
             <div className="h-48">
               <ResponsiveContainer width="100%" height="100%">
                 <BarChart data={chartData} barCategoryGap="30%">
-                  <XAxis dataKey="name" tick={{ fontSize: 11, fill: "#7A6E65" }} axisLine={false} tickLine={false} />
-                  <YAxis tick={{ fontSize: 11, fill: "#7A6E65" }} axisLine={false} tickLine={false} tickFormatter={(v) => `$${(v / 1000).toFixed(0)}k`} />
-                  <Tooltip formatter={(v) => [`$${Number(v).toLocaleString()}`, ""]} contentStyle={{ borderRadius: 12, border: "1px solid #D4C4B0", fontSize: 12 }} />
+                  <XAxis dataKey="name" tick={{ fontSize: 11, fill: "#64748B" }} axisLine={false} tickLine={false} />
+                  <YAxis tick={{ fontSize: 11, fill: "#64748B" }} axisLine={false} tickLine={false} tickFormatter={(v) => `$${(v / 1000).toFixed(0)}k`} />
+                  <Tooltip formatter={(v) => [`$${Number(v).toLocaleString()}`, ""]} contentStyle={{ borderRadius: 12, border: "1px solid #CBD5E1", fontSize: 12 }} />
                   <Bar dataKey="value" radius={[8, 8, 0, 0]}>
                     {chartData.map((entry, i) => <Cell key={i} fill={entry.fill} />)}
                   </Bar>
@@ -134,13 +134,13 @@ export default function ROICalculator() {
               </ResponsiveContainer>
             </div>
 
-            <p className="text-xs text-[#7A6E65]/70 italic">
+            <p className="text-xs text-[#64748B]/70 italic">
               Estimates based on industry benchmarks. Assumes ~15% lead-to-customer conversion. Actual results vary.
             </p>
 
             <Link
               href="/contact"
-              className="block w-full text-center py-4 rounded-full bg-[#C8522A] text-white font-bold hover:bg-[#A8432A] transition-colors"
+              className="block w-full text-center py-4 rounded-full bg-[#4A90D9] text-white font-bold hover:bg-[#3478C2] transition-colors"
             >
               Lock these numbers in — book a call →
             </Link>

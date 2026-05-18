@@ -39,7 +39,7 @@ export default function Navbar() {
             <Link
               key={l.href}
               href={l.href}
-              className={`text-sm font-medium transition-colors hover:text-[#C8522A] ${
+              className={`text-sm font-medium transition-colors hover:text-[#4A90D9] ${
                 scrolled ? "text-[#1C1F2E]/70" : "text-white/80"
               }`}
             >
@@ -50,7 +50,7 @@ export default function Navbar() {
             href="/contact"
             className={`px-5 py-2.5 rounded-full text-sm font-semibold transition-all ${
               scrolled
-                ? "bg-[#C8522A] text-white hover:bg-[#A8432A]"
+                ? "bg-[#4A90D9] text-white hover:bg-[#3478C2]"
                 : "bg-white/15 text-white border border-white/30 hover:bg-white/25 backdrop-blur-sm"
             }`}
           >
@@ -74,7 +74,7 @@ export default function Navbar() {
             <Link
               key={l.href}
               href={l.href}
-              className="block text-base font-medium text-[#1C1F2E]/70 hover:text-[#C8522A] transition-colors"
+              className="block text-base font-medium text-[#1C1F2E]/70 hover:text-[#4A90D9] transition-colors"
               onClick={() => setOpen(false)}
             >
               {l.label}
@@ -82,7 +82,7 @@ export default function Navbar() {
           ))}
           <Link
             href="/contact"
-            className="block text-center py-3.5 rounded-full bg-[#C8522A] text-white font-semibold hover:bg-[#A8432A] transition-colors"
+            className="block text-center py-3.5 rounded-full bg-[#4A90D9] text-white font-semibold hover:bg-[#3478C2] transition-colors"
             onClick={() => setOpen(false)}
           >
             Book a Free Call
@@ -102,7 +102,7 @@ function LogoWordmark({ scrolled }: { scrolled: boolean }) {
       <polyline points="58,1 61,1 61,4" stroke={c} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
       {/* Single text node with tspan — natural character spacing, no gaps */}
       <text x="0" y="30" fontFamily="var(--font-geist-sans),-apple-system,sans-serif" fontWeight="800" fontSize="24" letterSpacing="-0.5">
-        <tspan fill={c}>dre</tspan><tspan fill="#C8522A">v</tspan><tspan fill={c}>scale</tspan>
+        <tspan fill={c}>dre</tspan><tspan fill="#4A90D9">v</tspan><tspan fill={c}>scale</tspan>
       </text>
       <text x="53" y="40" fontFamily="var(--font-geist-sans),-apple-system,sans-serif" fontWeight="600" fontSize="8" letterSpacing="3" fill={c} opacity="0.45" textAnchor="middle">MEDIA</text>
     </svg>

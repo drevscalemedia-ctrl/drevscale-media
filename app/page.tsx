@@ -24,8 +24,8 @@ export default function Home() {
         {/* ── Hero ─────────────────────────────────────────── */}
         <section className="relative bg-[#111318] text-white overflow-hidden min-h-screen flex items-center">
           {/* Ambient glow orbs */}
-          <div className="absolute -top-40 -left-40 w-[700px] h-[700px] rounded-full bg-[#C8522A]/15 blur-[140px] pointer-events-none" />
-          <div className="absolute bottom-0 right-0 w-[500px] h-[500px] rounded-full bg-[#E8A848]/10 blur-[120px] pointer-events-none" />
+          <div className="absolute -top-40 -left-40 w-[700px] h-[700px] rounded-full bg-[#4A90D9]/15 blur-[140px] pointer-events-none" />
+          <div className="absolute bottom-0 right-0 w-[500px] h-[500px] rounded-full bg-[#93C5FD]/10 blur-[120px] pointer-events-none" />
 
           <div className="relative max-w-5xl mx-auto px-6 py-40">
             <motion.div
@@ -38,15 +38,15 @@ export default function Home() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.15 }}
-                className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-[#E8A848]/25 bg-[#E8A848]/10 text-[#E8A848] text-sm font-semibold mb-10"
+                className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-[#93C5FD]/25 bg-[#93C5FD]/10 text-[#93C5FD] text-sm font-semibold mb-10"
               >
-                <span className="w-1.5 h-1.5 rounded-full bg-[#E8A848] animate-pulse" />
+                <span className="w-1.5 h-1.5 rounded-full bg-[#93C5FD] animate-pulse" />
                 {BRAND.scarcity}
               </motion.div>
 
               <h1 className="font-display text-7xl md:text-[96px] font-black leading-[0.95] mb-8 tracking-tight">
                 More Leads.<br />
-                <em className="not-italic text-[#C8522A]">More Customers.</em>
+                <em className="not-italic text-[#4A90D9]">More Customers.</em>
               </h1>
 
               <p className="text-white/55 text-xl md:text-2xl max-w-xl mb-12 leading-relaxed">
@@ -58,7 +58,7 @@ export default function Home() {
               <div className="flex flex-wrap gap-4">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center px-9 py-5 rounded-full bg-[#C8522A] text-white font-bold text-lg hover:bg-[#A8432A] transition-colors shadow-2xl shadow-[#C8522A]/25"
+                  className="inline-flex items-center px-9 py-5 rounded-full bg-[#4A90D9] text-white font-bold text-lg hover:bg-[#3478C2] transition-colors shadow-2xl shadow-[#4A90D9]/25"
                 >
                   Book a Free Strategy Call →
                 </Link>
@@ -85,7 +85,7 @@ export default function Home() {
         </section>
 
         {/* ── Stats bar ────────────────────────────────────── */}
-        <section className="bg-[#C8522A]">
+        <section className="bg-gradient-to-r from-[#0D0F18] via-[#1a2035] to-[#0D0F18] border-y border-white/5">
           <div className="max-w-5xl mx-auto px-6 py-14 grid grid-cols-2 md:grid-cols-4 gap-8 text-white text-center">
             {[
               { end: 15, suffix: "+", label: "Campaigns Run" },
@@ -100,10 +100,10 @@ export default function Home() {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.08 }}
               >
-                <div className="font-display text-5xl font-black leading-none mb-2">
+                <div className="font-display text-5xl font-black leading-none mb-2 text-[#93C5FD]">
                   {stat.raw ? stat.raw : <AnimatedCounter end={stat.end!} suffix={stat.suffix} />}
                 </div>
-                <div className="text-white/70 text-sm">{stat.label}</div>
+                <div className="text-white/50 text-sm">{stat.label}</div>
               </motion.div>
             ))}
           </div>
@@ -118,7 +118,7 @@ export default function Home() {
               viewport={{ once: true }}
               className="mb-16"
             >
-              <p className="text-[#C8522A] font-semibold text-sm uppercase tracking-widest mb-4">What We Do</p>
+              <p className="text-[#4A90D9] font-semibold text-sm uppercase tracking-widest mb-4">What We Do</p>
               <h2 className="font-display text-6xl font-black text-[#111318] leading-none">
                 Two services.<br />One goal.
               </h2>
@@ -145,11 +145,11 @@ export default function Home() {
               viewport={{ once: true }}
               className="mb-16"
             >
-              <p className="text-[#C8522A] font-semibold text-sm uppercase tracking-widest mb-4">Industries We Serve</p>
+              <p className="text-[#4A90D9] font-semibold text-sm uppercase tracking-widest mb-4">Industries We Serve</p>
               <h2 className="font-display text-6xl font-black text-[#111318] leading-none">
                 Does this work for<br />your business?
               </h2>
-              <p className="text-[#7A6E65] mt-5 text-lg max-w-lg">Hover each tile to see average results. Every industry has its own cost per lead.</p>
+              <p className="text-[#64748B] mt-5 text-lg max-w-lg">Hover each tile to see average results. Every industry has its own cost per lead.</p>
             </motion.div>
             <IndustryGrid />
           </div>
@@ -167,7 +167,7 @@ export default function Home() {
         {/* ── CTA ──────────────────────────────────────────── */}
         <section className="py-32 bg-[#111318] text-white text-center relative overflow-hidden">
           <div className="absolute inset-0 pointer-events-none">
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] rounded-full bg-[#C8522A]/15 blur-[100px]" />
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] rounded-full bg-[#4A90D9]/15 blur-[100px]" />
           </div>
           <div className="relative max-w-2xl mx-auto px-6">
             <motion.div
@@ -175,15 +175,15 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <p className="text-[#E8A848] font-semibold text-sm uppercase tracking-widest mb-5">Still thinking?</p>
+              <p className="text-[#93C5FD] font-semibold text-sm uppercase tracking-widest mb-5">Still thinking?</p>
               <h2 className="font-display text-6xl md:text-7xl font-black leading-[0.95] mb-8">
                 The call is free.<br />
-                <em className="not-italic text-[#C8522A]">The leads aren't.</em>
+                <em className="not-italic text-[#4A90D9]">The leads aren't.</em>
               </h2>
               <p className="text-white/45 text-xl mb-12">20 minutes. No pitch. Just an honest look at what Facebook ads could do for your business.</p>
               <Link
                 href="/contact"
-                className="inline-flex items-center px-10 py-5 rounded-full bg-[#C8522A] text-white font-bold text-lg hover:bg-[#A8432A] transition-colors"
+                className="inline-flex items-center px-10 py-5 rounded-full bg-[#4A90D9] text-white font-bold text-lg hover:bg-[#3478C2] transition-colors"
               >
                 Book a Free Strategy Call →
               </Link>

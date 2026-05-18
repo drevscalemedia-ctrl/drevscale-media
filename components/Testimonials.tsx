@@ -5,7 +5,7 @@ import { TESTIMONIALS } from "@/lib/content";
 
 export default function Testimonials() {
   return (
-    <section className="py-24 bg-[#F5EFE3]">
+    <section className="py-24 bg-[#F1F5F9]">
       <div className="max-w-6xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -13,7 +13,7 @@ export default function Testimonials() {
           viewport={{ once: true }}
           className="text-center mb-14"
         >
-          <p className="text-[#C8522A] font-semibold text-sm uppercase tracking-widest mb-3">What Clients Say</p>
+          <p className="text-[#4A90D9] font-semibold text-sm uppercase tracking-widest mb-3">What Clients Say</p>
           <h2 className="font-display text-5xl font-black text-[#1C1F2E]">Don't take our word for it.</h2>
         </motion.div>
 
@@ -27,14 +27,14 @@ export default function Testimonials() {
               transition={{ delay: i * 0.1 }}
               className="p-8 rounded-3xl bg-white shadow-lg shadow-black/[0.06] flex flex-col"
             >
-              <Quote size={32} className="text-[#C8522A] mb-6 opacity-60" />
+              <Quote size={32} className="text-[#4A90D9] mb-6 opacity-60" />
               <p className="font-display text-xl font-semibold text-[#1C1F2E] leading-snug mb-6 italic flex-1">
                 "{t.quote}"
               </p>
-              <div className="border-t border-[#D4C4B0] pt-4">
+              <div className="border-t border-[#CBD5E1] pt-4">
                 <p className="font-bold text-[#1C1F2E] text-sm">{t.name}</p>
-                <p className="text-[#7A6E65] text-xs mt-0.5">{t.business}</p>
-                <span className="inline-block mt-3 px-3 py-1 rounded-full bg-[#F5EFE3] text-[#C8522A] text-xs font-semibold">
+                <p className="text-[#64748B] text-xs mt-0.5">{t.business}</p>
+                <span className="inline-block mt-3 px-3 py-1 rounded-full bg-[#F1F5F9] text-[#4A90D9] text-xs font-semibold">
                   {t.metric}
                 </span>
               </div>

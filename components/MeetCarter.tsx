@@ -6,7 +6,7 @@ import { BRAND } from "@/lib/content";
 
 export default function MeetCarter() {
   return (
-    <section className="py-24 bg-[#FAF7F2]">
+    <section className="py-24 bg-[#FFFFFF]">
       <div className="max-w-5xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-16 items-center">
           {/* Portrait placeholder */}
@@ -16,7 +16,7 @@ export default function MeetCarter() {
             viewport={{ once: true }}
             className="relative"
           >
-            <div className="aspect-[4/5] rounded-3xl overflow-hidden bg-gradient-to-br from-[#1C1F2E] via-[#2d3348] to-[#C8522A]/40 flex items-end">
+            <div className="aspect-[4/5] rounded-3xl overflow-hidden bg-gradient-to-br from-[#1C1F2E] via-[#2d3348] to-[#4A90D9]/40 flex items-end">
               {/* Portrait area */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center">
@@ -39,10 +39,10 @@ export default function MeetCarter() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3 }}
-              className="absolute -right-4 top-8 bg-white rounded-2xl p-4 shadow-lg border border-[#D4C4B0]"
+              className="absolute -right-4 top-8 bg-white rounded-2xl p-4 shadow-lg border border-[#CBD5E1]"
             >
               <div className="flex items-center gap-2 text-sm font-semibold text-[#1C1F2E]">
-                <MapPin size={14} className="text-[#C8522A]" />
+                <MapPin size={14} className="text-[#4A90D9]" />
                 Fountain Hills, AZ
               </div>
             </motion.div>
@@ -52,10 +52,10 @@ export default function MeetCarter() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.4 }}
-              className="absolute -left-4 bottom-24 bg-white rounded-2xl p-4 shadow-lg border border-[#D4C4B0]"
+              className="absolute -left-4 bottom-24 bg-white rounded-2xl p-4 shadow-lg border border-[#CBD5E1]"
             >
               <div className="flex items-center gap-2 text-sm font-semibold text-[#1C1F2E]">
-                <Clock size={14} className="text-[#C8522A]" />
+                <Clock size={14} className="text-[#4A90D9]" />
                 Replies within 4 hours
               </div>
             </motion.div>
@@ -67,12 +67,12 @@ export default function MeetCarter() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <p className="text-[#C8522A] font-semibold text-sm uppercase tracking-widest mb-4">Meet Your Marketer</p>
+            <p className="text-[#4A90D9] font-semibold text-sm uppercase tracking-widest mb-4">Meet Your Marketer</p>
             <h2 className="font-display text-5xl font-black text-[#1C1F2E] leading-tight mb-6">
-              You'll work with<br />Carter. <em className="not-italic text-[#C8522A]">Directly.</em>
+              You'll work with<br />Carter. <em className="not-italic text-[#4A90D9]">Directly.</em>
             </h2>
 
-            <div className="space-y-4 text-[#7A6E65] leading-relaxed mb-8">
+            <div className="space-y-4 text-[#64748B] leading-relaxed mb-8">
               <p>I'm a Fountain Hills local. I know this market — the businesses, the community, and the kind of customer you're trying to reach. That's not something a big agency in Phoenix can replicate.</p>
               <p>I started Drevscale Media because I kept seeing great local businesses get burned by agencies that overpromised and disappeared. You deserved better.</p>
               <p>I work with a small number of clients on purpose — so I can give every account the attention it needs to actually perform.</p>
@@ -86,8 +86,8 @@ export default function MeetCarter() {
                 { icon: MessageSquare, text: "You have Carter's direct number — not an account manager" },
               ].map(({ icon: Icon, text }) => (
                 <div key={text} className="flex items-center gap-3 text-sm text-[#1C1F2E]">
-                  <div className="w-8 h-8 rounded-lg bg-[#F5EFE3] flex items-center justify-center flex-shrink-0">
-                    <Icon size={14} className="text-[#C8522A]" />
+                  <div className="w-8 h-8 rounded-lg bg-[#F1F5F9] flex items-center justify-center flex-shrink-0">
+                    <Icon size={14} className="text-[#4A90D9]" />
                   </div>
                   {text}
                 </div>

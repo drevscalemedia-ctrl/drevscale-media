@@ -21,7 +21,7 @@ export default function StickyMobileCTA() {
       <div className="flex gap-3">
         <a
           href="/contact"
-          className="flex-1 text-center py-4 rounded-2xl bg-[#C8522A] text-white font-bold text-sm shadow-lg shadow-[#C8522A]/30"
+          className="flex-1 text-center py-4 rounded-2xl bg-[#4A90D9] text-white font-bold text-sm shadow-lg shadow-[#4A90D9]/30"
         >
           Book a Free Call
         </a>

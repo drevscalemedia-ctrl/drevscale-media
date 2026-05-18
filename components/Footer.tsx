@@ -7,14 +7,14 @@ export default function Footer() {
     <footer className="bg-[#111318] text-white">
       {/* Big CTA */}
       <div className="border-b border-white/10 py-24 px-6 text-center">
-        <p className="text-[#E8A848] font-semibold text-sm uppercase tracking-widest mb-4">Ready?</p>
+        <p className="text-[#93C5FD] font-semibold text-sm uppercase tracking-widest mb-4">Ready?</p>
         <h2 className="font-display text-6xl md:text-7xl font-black leading-none mb-8">
           Let's get you<br />
-          <em className="not-italic text-[#C8522A]">more customers.</em>
+          <em className="not-italic text-[#4A90D9]">more customers.</em>
         </h2>
         <a
           href="/contact"
-          className="inline-flex items-center px-10 py-5 rounded-full bg-[#C8522A] text-white font-bold text-lg hover:bg-[#A8432A] transition-colors"
+          className="inline-flex items-center px-10 py-5 rounded-full bg-[#4A90D9] text-white font-bold text-lg hover:bg-[#3478C2] transition-colors"
         >
           Book a Free Strategy Call →
         </a>
@@ -73,7 +73,7 @@ function LogoWhite() {
       <polyline points="42,11 48,5 54,8 61,1" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
       <polyline points="58,1 61,1 61,4" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
       <text x="0" y="30" fontFamily="var(--font-geist-sans),-apple-system,sans-serif" fontWeight="800" fontSize="24" letterSpacing="-0.5">
-        <tspan fill="white">dre</tspan><tspan fill="#C8522A">v</tspan><tspan fill="white">scale</tspan>
+        <tspan fill="white">dre</tspan><tspan fill="#4A90D9">v</tspan><tspan fill="white">scale</tspan>
       </text>
       <text x="53" y="40" fontFamily="var(--font-geist-sans),-apple-system,sans-serif" fontWeight="600" fontSize="8" letterSpacing="3" fill="white" opacity="0.4" textAnchor="middle">MEDIA</text>
     </svg>

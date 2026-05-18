@@ -1,32 +1,19 @@
 @import "tailwindcss";
 
 @theme {
-  /* Brand palette — desert modern */
-  --color-desert-night: #1C1F2E;
-  --color-burnt-orange: #C8522A;
-  --color-terracotta: #A8432A;
-  --color-warm-amber: #E8A848;
-  --color-cream: #F5EFE3;
-  --color-off-white: #FAF7F2;
-  --color-warm-gray: #7A6E65;
-  --color-sand: #D4C4B0;
-  --color-sand-light: #EDE5D8;
+  /* Brand palette — dark + blue */
+  --color-night: #111318;
+  --color-navy: #1C1F2E;
+  --color-blue: #4A90D9;
+  --color-blue-dark: #3478C2;
+  --color-blue-light: #93C5FD;
+  --color-off-white: #F1F5F9;
+  --color-cool-gray: #64748B;
+  --color-border: #CBD5E1;
 
   /* Typography */
   --font-display: var(--font-fraunces), Georgia, serif;
   --font-sans: var(--font-geist-sans), -apple-system, sans-serif;
-
-  /* Spacing scale (4px base) */
-  --spacing-1: 4px;
-  --spacing-2: 8px;
-  --spacing-3: 12px;
-  --spacing-4: 16px;
-  --spacing-6: 24px;
-  --spacing-8: 32px;
-  --spacing-12: 48px;
-  --spacing-16: 64px;
-  --spacing-24: 96px;
-  --spacing-32: 128px;
 
   /* Motion */
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
@@ -37,15 +24,15 @@ html {
 }
 
 body {
-  background: var(--color-off-white);
-  color: var(--color-desert-night);
+  background: #FFFFFF;
+  color: var(--color-navy);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
 }
 
 /* Focus rings */
 *:focus-visible {
-  outline: 2px solid var(--color-burnt-orange);
+  outline: 2px solid var(--color-blue);
   outline-offset: 3px;
   border-radius: 4px;
 }
