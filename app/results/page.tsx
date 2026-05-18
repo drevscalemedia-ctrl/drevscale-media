@@ -66,7 +66,7 @@ export default function Results() {
         </section>
 
         {/* Case Studies */}
-        <section className="py-24 bg-[#FFFFFF]">
+        <section className="py-24 bg-[#0A0A0A]">
           <div className="max-w-5xl mx-auto px-6">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -75,8 +75,8 @@ export default function Results() {
               className="mb-14"
             >
               <p className="text-[#1D9BF0] font-semibold text-sm uppercase tracking-widest mb-3">Case Studies</p>
-              <h2 className="font-display text-5xl font-black text-[#1C1F2E]">The numbers behind the wins.</h2>
-              <p className="text-[#64748B] mt-4 max-w-xl">Industry types shared; business names kept private per client request.</p>
+              <h2 className="font-display text-5xl font-black text-white">The numbers behind the wins.</h2>
+              <p className="text-white/40 mt-4 max-w-xl">Industry types shared; business names kept private per client request.</p>
             </motion.div>
 
             <div className="space-y-8">
