@@ -38,7 +38,7 @@ export default function CaseStudyCard({ cs, delay = 0 }: { cs: CaseStudy; delay?
           <h3 className="font-display text-2xl font-black text-white">{cs.industry}</h3>
           <p className="text-white/40 text-sm mt-1">📍 {cs.location} · {cs.timeframe}</p>
         </div>
-        <span className="px-3 py-1.5 rounded-full bg-[#4A90D9]/20 text-[#93C5FD] text-xs font-semibold">
+        <span className="px-3 py-1.5 rounded-full bg-[#4A90D9]/20 text-[#93BCED] text-xs font-semibold">
           ${cs.adSpend} ad spend
         </span>
       </div>

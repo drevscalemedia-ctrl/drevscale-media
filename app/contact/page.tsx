@@ -25,7 +25,7 @@ export default function Contact() {
           </div>
           <div className="relative max-w-5xl mx-auto px-6">
             <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-              <p className="text-[#93C5FD] font-semibold text-sm uppercase tracking-widest mb-4">Contact</p>
+              <p className="text-[#93BCED] font-semibold text-sm uppercase tracking-widest mb-4">Contact</p>
               <h1 className="font-display text-6xl md:text-7xl font-black leading-none mb-6">
                 Let's<br />
                 <em className="not-italic text-[#4A90D9]">talk.</em>

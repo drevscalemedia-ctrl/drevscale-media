@@ -7,7 +7,7 @@ export default function Footer() {
     <footer className="bg-[#111318] text-white">
       {/* Big CTA */}
       <div className="border-b border-white/10 py-24 px-6 text-center">
-        <p className="text-[#93C5FD] font-semibold text-sm uppercase tracking-widest mb-4">Ready?</p>
+        <p className="text-[#93BCED] font-semibold text-sm uppercase tracking-widest mb-4">Ready?</p>
         <h2 className="font-display text-6xl md:text-7xl font-black leading-none mb-8">
           Let's get you<br />
           <em className="not-italic text-[#4A90D9]">more customers.</em>

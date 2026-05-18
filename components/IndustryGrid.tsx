@@ -69,7 +69,7 @@ function IndustryTile({ industry, delay }: { industry: typeof INDUSTRIES[0]; del
           className="absolute inset-0 rounded-2xl bg-[#1C1F2E] flex flex-col items-center justify-center gap-2 px-4 text-center"
           style={{ backfaceVisibility: "hidden", transform: "rotateY(180deg)" }}
         >
-          <span className="text-[#93C5FD] font-bold text-xs uppercase tracking-wider">{industry.name}</span>
+          <span className="text-[#93BCED] font-bold text-xs uppercase tracking-wider">{industry.name}</span>
           <p className="text-white text-sm leading-snug">{industry.stat}</p>
           <span className="text-white/30 text-xs">typical range*</span>
         </div>

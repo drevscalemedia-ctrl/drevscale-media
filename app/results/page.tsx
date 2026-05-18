@@ -19,11 +19,11 @@ export default function Results() {
         {/* Hero */}
         <section className="relative bg-[#111318] text-white overflow-hidden py-28">
           <div className="absolute inset-0 pointer-events-none">
-            <div className="absolute top-0 right-0 w-[500px] h-[400px] rounded-full bg-[#93C5FD]/8 blur-[100px]" />
+            <div className="absolute top-0 right-0 w-[500px] h-[400px] rounded-full bg-[#93BCED]/8 blur-[100px]" />
           </div>
           <div className="relative max-w-5xl mx-auto px-6">
             <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-              <p className="text-[#93C5FD] font-semibold text-sm uppercase tracking-widest mb-4">Results</p>
+              <p className="text-[#93BCED] font-semibold text-sm uppercase tracking-widest mb-4">Results</p>
               <h1 className="font-display text-6xl md:text-7xl font-black leading-none mb-6">
                 Real numbers.<br />
                 <em className="not-italic text-[#4A90D9]">Real businesses.</em>

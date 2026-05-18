@@ -43,7 +43,7 @@ export default function ServiceCard({ type }: Props) {
           <Icon size={24} className={hovered ? "text-white" : "text-[#4A90D9]"} />
         </div>
 
-        <p className={`text-xs font-semibold uppercase tracking-widest mb-2 transition-colors duration-300 ${hovered ? "text-[#93C5FD]" : "text-[#4A90D9]"}`}>
+        <p className={`text-xs font-semibold uppercase tracking-widest mb-2 transition-colors duration-300 ${hovered ? "text-[#93BCED]" : "text-[#4A90D9]"}`}>
           {isFb ? "Primary Service" : "Add-on Service"}
         </p>
 
@@ -71,7 +71,7 @@ export default function ServiceCard({ type }: Props) {
                   transition={{ delay: i * 0.05 }}
                   className="flex items-start gap-3"
                 >
-                  <CheckCircle2 size={16} className="text-[#93C5FD] flex-shrink-0 mt-0.5" />
+                  <CheckCircle2 size={16} className="text-[#93BCED] flex-shrink-0 mt-0.5" />
                   <div>
                     <span className="text-white text-sm font-semibold">{item.title}</span>
                     <span className="text-white/50 text-xs ml-2">{item.desc}</span>
@@ -85,7 +85,7 @@ export default function ServiceCard({ type }: Props) {
         <div className="flex items-center justify-between">
           <div>
             <p className={`text-xs uppercase tracking-wider mb-1 transition-colors duration-300 ${hovered ? "text-white/40" : "text-[#64748B]"}`}>Starting from</p>
-            <p className={`font-bold text-lg transition-colors duration-300 ${hovered ? "text-[#93C5FD]" : "text-[#1C1F2E]"}`}>{price}</p>
+            <p className={`font-bold text-lg transition-colors duration-300 ${hovered ? "text-[#93BCED]" : "text-[#1C1F2E]"}`}>{price}</p>
           </div>
           <Link
             href={href}

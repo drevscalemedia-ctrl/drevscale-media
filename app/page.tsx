@@ -40,7 +40,7 @@ export default function Home() {
           <div
             className="absolute inset-0 pointer-events-none"
             style={{
-              background: "radial-gradient(ellipse 900px 700px at 38% 55%, rgba(59,130,246,0.14) 0%, transparent 65%)",
+              background: "radial-gradient(ellipse 900px 700px at 38% 55%, rgba(74,144,217,0.14) 0%, transparent 65%)",
             }}
           />
 
@@ -54,9 +54,9 @@ export default function Home() {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#3B82F6]/25 bg-[#3B82F6]/[0.08] text-[#3B82F6] text-xs font-semibold uppercase tracking-widest mb-9"
+              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#4A90D9]/25 bg-[#4A90D9]/[0.08] text-[#4A90D9] text-xs font-semibold uppercase tracking-widest mb-9"
             >
-              <span className="w-1.5 h-1.5 rounded-full bg-[#3B82F6] animate-pulse" />
+              <span className="w-1.5 h-1.5 rounded-full bg-[#4A90D9] animate-pulse" />
               {BRAND.scarcity}
             </motion.div>
 
@@ -68,7 +68,7 @@ export default function Home() {
               className="text-[68px] md:text-[88px] font-black leading-[1.02] tracking-[-0.03em] text-[#F5F5F5] mb-7"
             >
               More Leads.<br />
-              <span className="text-[#3B82F6]">More Customers.</span>
+              <span className="text-[#4A90D9]">More Customers.</span>
             </motion.h1>
 
             {/* Subheading */}
@@ -91,8 +91,8 @@ export default function Home() {
             >
               <Link
                 href="/contact"
-                className="inline-flex items-center px-8 py-4 rounded-xl bg-[#3B82F6] text-white font-semibold text-sm hover:bg-[#2563EB] transition-colors"
-                style={{ boxShadow: "0 0 40px rgba(59,130,246,0.35)" }}
+                className="inline-flex items-center px-8 py-4 rounded-xl bg-[#4A90D9] text-white font-semibold text-sm hover:bg-[#3478C2] transition-colors"
+                style={{ boxShadow: "0 0 40px rgba(74,144,217,0.35)" }}
               >
                 Book a Free Strategy Call →
               </Link>
@@ -136,7 +136,7 @@ export default function Home() {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.08 }}
               >
-                <div className="font-display text-5xl font-black leading-none mb-2 text-[#93C5FD]">
+                <div className="font-display text-5xl font-black leading-none mb-2 text-[#93BCED]">
                   {stat.raw ? stat.raw : <AnimatedCounter end={stat.end!} suffix={stat.suffix} />}
                 </div>
                 <div className="text-white/50 text-sm">{stat.label}</div>
@@ -211,7 +211,7 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <p className="text-[#93C5FD] font-semibold text-sm uppercase tracking-widest mb-5">Still thinking?</p>
+              <p className="text-[#93BCED] font-semibold text-sm uppercase tracking-widest mb-5">Still thinking?</p>
               <h2 className="font-display text-6xl md:text-7xl font-black leading-[0.95] mb-8">
                 The call is free.<br />
                 <em className="not-italic text-[#4A90D9]">The leads aren't.</em>

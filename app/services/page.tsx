@@ -22,7 +22,7 @@ export default function Services() {
           </div>
           <div className="relative max-w-5xl mx-auto px-6">
             <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-              <p className="text-[#93C5FD] font-semibold text-sm uppercase tracking-widest mb-4">Services</p>
+              <p className="text-[#93BCED] font-semibold text-sm uppercase tracking-widest mb-4">Services</p>
               <h1 className="font-display text-6xl md:text-7xl font-black leading-none mb-6">
                 What we<br />
                 <em className="not-italic text-[#4A90D9]">actually do.</em>
@@ -136,7 +136,7 @@ export default function Services() {
           </div>
           <div className="relative max-w-2xl mx-auto px-6">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-              <p className="text-[#93C5FD] font-semibold text-sm uppercase tracking-widest mb-4">Ready?</p>
+              <p className="text-[#93BCED] font-semibold text-sm uppercase tracking-widest mb-4">Ready?</p>
               <h2 className="font-display text-5xl font-black mb-6">
                 Let's talk about<br />
                 <em className="not-italic text-[#4A90D9]">your business.</em>

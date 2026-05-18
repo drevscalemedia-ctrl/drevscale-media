@@ -56,7 +56,7 @@ export default function About() {
           </div>
           <div className="relative max-w-5xl mx-auto px-6">
             <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-              <p className="text-[#93C5FD] font-semibold text-sm uppercase tracking-widest mb-4">About</p>
+              <p className="text-[#93BCED] font-semibold text-sm uppercase tracking-widest mb-4">About</p>
               <h1 className="font-display text-6xl md:text-7xl font-black leading-none mb-6">
                 Local guy.<br />
                 <em className="not-italic text-[#4A90D9]">Real results.</em>
@@ -80,7 +80,7 @@ export default function About() {
               viewport={{ once: true }}
               className="mb-14 text-center"
             >
-              <p className="text-[#93C5FD] font-semibold text-sm uppercase tracking-widest mb-3">How I Work</p>
+              <p className="text-[#93BCED] font-semibold text-sm uppercase tracking-widest mb-3">How I Work</p>
               <h2 className="font-display text-5xl font-black text-white">Three commitments.</h2>
             </motion.div>
             <div className="grid md:grid-cols-3 gap-6">
