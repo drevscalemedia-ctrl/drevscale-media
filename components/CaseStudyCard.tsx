@@ -5,6 +5,7 @@ import { MapPin } from "lucide-react";
 
 interface CaseStudy {
   industry: string;
+  clientName: string;
   location: string;
   before: { leads: number; cpl: number; roas: number };
   after: { leads: number; cpl: number; roas: number };
@@ -267,7 +268,7 @@ export default function CaseStudyCard({ cs, delay = 0 }: { cs: CaseStudy; delay?
           <p className="font-display italic text-white/65 text-base leading-snug">
             "{cs.quote}"
           </p>
-          <p className="text-white/25 text-xs mt-2">— [CLIENT NAME], {cs.industry}</p>
+          <p className="text-white/25 text-xs mt-2">— {cs.clientName}, {cs.industry}</p>
         </div>
       </div>
     </motion.div>

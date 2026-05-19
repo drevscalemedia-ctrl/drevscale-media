@@ -5,32 +5,16 @@ import { INDUSTRIES } from "@/lib/content";
 
 export default function IndustryGrid() {
   return (
-    <section className="py-24 bg-[#F1F5F9]">
-      <div className="max-w-6xl mx-auto px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-14"
-        >
-          <p className="text-[#1D9BF0] font-semibold text-sm uppercase tracking-widest mb-3">Who We Serve</p>
-          <h2 className="font-display text-5xl font-black text-[#1C1F2E]">
-            Local businesses,<br />all across the East Valley.
-          </h2>
-          <p className="text-[#64748B] mt-4 text-lg">Hover to see typical results per industry</p>
-        </motion.div>
-
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {INDUSTRIES.map((industry, i) => (
-            <IndustryTile key={industry.name} industry={industry} delay={i * 0.06} />
-          ))}
-        </div>
-
-        <p className="text-center text-[#64748B]/60 text-xs mt-8">
-          * Stats shown are typical ranges across Drevscale Media campaigns — not guaranteed outcomes.
-        </p>
+    <>
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        {INDUSTRIES.map((industry, i) => (
+          <IndustryTile key={industry.name} industry={industry} delay={i * 0.06} />
+        ))}
       </div>
-    </section>
+      <p className="text-center text-[#64748B]/60 text-xs mt-8">
+        * Stats shown are typical ranges across Drevscale Media campaigns — not guaranteed outcomes.
+      </p>
+    </>
   );
 }
 

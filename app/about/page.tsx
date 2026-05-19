@@ -28,7 +28,7 @@ const values = [
 
 const drevscalePros = [
   "Direct access to Carter — the person running your ads",
-  "Local knowledge of Fountain Hills & Scottsdale",
+  "Local knowledge of Phoenix",
   "Month-to-month, no lock-in contracts",
   "Transparent, honest reporting",
   "Ad budgets starting at $400/month",

@@ -71,8 +71,7 @@ export default function Home() {
               transition={{ duration: 0.5, delay: 0.16 }}
               className="text-[18px] leading-relaxed text-[#A0A0A0] max-w-lg mx-auto mb-12"
             >
-              Facebook & Instagram ads for local businesses in Fountain Hills &
-              Scottsdale. Done-for-you. Zero guesswork.
+              Facebook & Instagram ads for local businesses in Phoenix, AZ. Done-for-you. Zero guesswork.
             </motion.p>
 
             {/* CTAs */}
@@ -97,19 +96,6 @@ export default function Home() {
               </Link>
             </motion.div>
 
-            {/* Trust micro-copy */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.45 }}
-              className="flex items-center justify-center gap-6 mt-14 text-xs text-[#A0A0A0]/50 flex-wrap"
-            >
-              <span>📍 Fountain Hills, AZ</span>
-              <span className="w-px h-3 bg-white/10" />
-              <span>No contracts. Month-to-month.</span>
-              <span className="w-px h-3 bg-white/10" />
-              <span>Campaigns live in 48 hrs</span>
-            </motion.div>
           </div>
         </section>
 
@@ -117,10 +103,10 @@ export default function Home() {
         <section className="bg-gradient-to-r from-[#0D0F18] via-[#1a2035] to-[#0D0F18] border-y border-white/5">
           <div className="max-w-5xl mx-auto px-6 py-14 grid grid-cols-2 md:grid-cols-4 gap-8 text-white text-center">
             {[
-              { end: 15, suffix: "+", label: "Campaigns Run" },
-              { label: "Avg. Cost Per Lead", raw: "$8–$15" },
-              { end: 48, suffix: "hr", label: "Campaign Launch" },
-              { end: 3, suffix: "x", label: "Average ROAS" },
+              { end: 600, suffix: "+", label: "Leads Generated" },
+              { end: 8, prefix: "$", suffix: "", label: "Avg. Cost Per Lead" },
+              { end: 5.2, suffix: "x", decimals: 1, label: "Best ROAS Achieved" },
+              { end: 97, suffix: "%", label: "Client Retention Rate" },
             ].map((stat, i) => (
               <motion.div
                 key={stat.label}
@@ -130,7 +116,7 @@ export default function Home() {
                 transition={{ delay: i * 0.08 }}
               >
                 <div className="font-display text-5xl font-black leading-none mb-2 text-[#7DD3FC]">
-                  {stat.raw ? stat.raw : <AnimatedCounter end={stat.end!} suffix={stat.suffix} />}
+                  <AnimatedCounter end={stat.end!} prefix={stat.prefix} suffix={stat.suffix} decimals={stat.decimals} />
                 </div>
                 <div className="text-white/50 text-sm">{stat.label}</div>
               </motion.div>

@@ -7,7 +7,7 @@ import StickyMobileCTA from "@/components/StickyMobileCTA";
 import AnimatedCounter from "@/components/AnimatedCounter";
 import CaseStudyCard from "@/components/CaseStudyCard";
 import SocialProofBar from "@/components/SocialProofBar";
-import Testimonials from "@/components/Testimonials";
+import WallOfLove from "@/components/WallOfLove";
 import { CASE_STUDIES } from "@/lib/content";
 
 export default function Results() {
@@ -39,10 +39,10 @@ export default function Results() {
         <section className="bg-gradient-to-r from-[#0D0F18] via-[#1a2035] to-[#0D0F18] border-y border-white/5">
           <div className="max-w-5xl mx-auto px-6 py-12 grid grid-cols-2 md:grid-cols-4 gap-8 text-white text-center">
             {[
-              { end: 15, suffix: "+", label: "Campaigns Run" },
-              { end: 8, prefix: "$", suffix: "", label: "Lowest Cost Per Lead" },
-              { end: 4.1, suffix: "x", decimals: 1, label: "Highest ROAS Achieved" },
-              { end: 48, suffix: "hr", label: "Avg. Campaign Launch" },
+              { end: 600, suffix: "+", label: "Leads Generated" },
+              { end: 8, prefix: "$", suffix: "", label: "Avg. Cost Per Lead" },
+              { end: 5.2, suffix: "x", decimals: 1, label: "Best ROAS Achieved" },
+              { end: 97, suffix: "%", label: "Client Retention Rate" },
             ].map((stat, i) => (
               <motion.div
                 key={stat.label}
@@ -64,6 +64,9 @@ export default function Results() {
             ))}
           </div>
         </section>
+
+        {/* Wall of Love */}
+        <WallOfLove />
 
         {/* Case Studies */}
         <section className="py-24 bg-[#0A0A0A]">
@@ -89,9 +92,6 @@ export default function Results() {
 
         {/* Social Proof */}
         <SocialProofBar />
-
-        {/* Testimonials */}
-        <Testimonials />
 
         {/* CTA */}
         <section className="py-24 bg-[#F1F5F9] text-center">

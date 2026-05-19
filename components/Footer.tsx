@@ -5,31 +5,16 @@ import { BRAND } from "@/lib/content";
 export default function Footer() {
   return (
     <footer className="bg-[#111318] text-white">
-      {/* Big CTA */}
-      <div className="border-b border-white/10 py-24 px-6 text-center">
-        <p className="text-[#7DD3FC] font-semibold text-sm uppercase tracking-widest mb-4">Ready?</p>
-        <h2 className="font-display text-6xl md:text-7xl font-black leading-none mb-8">
-          Let's get you<br />
-          <em className="not-italic text-[#1D9BF0]">more customers.</em>
-        </h2>
-        <a
-          href="/contact"
-          className="inline-flex items-center px-10 py-5 rounded-full bg-[#1D9BF0] text-white font-bold text-lg hover:bg-[#0F85D0] transition-colors"
-        >
-          Book a Free Strategy Call →
-        </a>
-      </div>
-
       {/* Links */}
       <div className="max-w-6xl mx-auto px-6 py-16">
         <div className="grid md:grid-cols-3 gap-12 mb-16">
           <div>
             <LogoWhite />
             <p className="mt-4 text-white/40 text-sm leading-relaxed max-w-xs">
-              Local Facebook ads and web design for small businesses in Fountain Hills and Scottsdale, AZ.
+              Local Facebook ads and web design for small businesses in Phoenix, AZ.
             </p>
             <p className="mt-4 text-white/20 text-xs font-mono">
-              33.6064° N, 111.7175° W
+              33.4484° N, 112.0740° W
             </p>
           </div>
           <div>
@@ -60,7 +45,7 @@ export default function Footer() {
 
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-white/25">
           <p>© 2026 Drevscale Media. All rights reserved.</p>
-          <p>Serving Fountain Hills · Scottsdale · East Valley, AZ</p>
+          <p>Serving Phoenix, AZ</p>
         </div>
       </div>
     </footer>

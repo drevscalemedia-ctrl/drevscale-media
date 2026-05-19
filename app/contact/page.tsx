@@ -7,13 +7,6 @@ import ContactForm from "@/components/ContactForm";
 import { BRAND } from "@/lib/content";
 import LightSectionOrbs from "@/components/LightSectionOrbs";
 
-const paymentMethods = [
-  { label: "Zelle", handle: BRAND.phone, color: "#6B33C8" },
-  { label: "CashApp", handle: "$DrevscaleMedia", color: "#00C244" },
-  { label: "Venmo", handle: "@cdrevs1134", color: "#3D95CE" },
-  { label: "PayPal", handle: "@DrevscaleMedia", color: "#002F86" },
-];
-
 export default function Contact() {
   return (
     <>
@@ -99,29 +92,6 @@ export default function Contact() {
                   </div>
                 </div>
 
-                {/* Payment methods */}
-                <div className="p-6 rounded-3xl bg-white border border-[#CBD5E1]">
-                  <h4 className="font-semibold text-[#1C1F2E] mb-4 text-sm uppercase tracking-wider">Payment Methods</h4>
-                  <div className="grid grid-cols-2 gap-3">
-                    {paymentMethods.map((pm) => (
-                      <div
-                        key={pm.label}
-                        className="flex items-center gap-2 p-3 rounded-xl bg-[#FFFFFF] border border-[#CBD5E1]"
-                      >
-                        <div
-                          className="w-7 h-7 rounded-full flex items-center justify-center text-white text-xs font-bold flex-shrink-0"
-                          style={{ backgroundColor: pm.color }}
-                        >
-                          {pm.label[0]}
-                        </div>
-                        <div>
-                          <p className="text-[#1C1F2E] text-xs font-semibold">{pm.label}</p>
-                          <p className="text-[#64748B] text-xs">{pm.handle}</p>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
               </motion.div>
 
               {/* Right: form */}

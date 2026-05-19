@@ -17,7 +17,7 @@ export default function SocialProofBar() {
   return (
     <div className="bg-[#1C1F2E] py-5 overflow-hidden">
       <p className="text-center text-white/30 text-xs uppercase tracking-widest mb-4">
-        Trusted by local businesses across the East Valley
+        Trusted by local businesses across Phoenix, AZ
       </p>
       <div className="flex animate-marquee" aria-hidden="true">
         {doubled.map((item, i) => {

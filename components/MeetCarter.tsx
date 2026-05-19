@@ -43,7 +43,7 @@ export default function MeetCarter() {
             >
               <div className="flex items-center gap-2 text-sm font-semibold text-[#1C1F2E]">
                 <MapPin size={14} className="text-[#1D9BF0]" />
-                Fountain Hills, AZ
+                Phoenix, AZ
               </div>
             </motion.div>
 
@@ -73,7 +73,7 @@ export default function MeetCarter() {
             </h2>
 
             <div className="space-y-4 text-[#64748B] leading-relaxed mb-8">
-              <p>I'm a Fountain Hills local. I know this market — the businesses, the community, and the kind of customer you're trying to reach. That's not something a big agency in Phoenix can replicate.</p>
+              <p>I'm a Phoenix local. I know this market — the businesses, the community, and the kind of customer you're trying to reach. That's not something a big out-of-state agency can replicate.</p>
               <p>I started Drevscale Media because I kept seeing great local businesses get burned by agencies that overpromised and disappeared. You deserved better.</p>
               <p>I work with a small number of clients on purpose — so I can give every account the attention it needs to actually perform.</p>
             </div>
@@ -81,7 +81,7 @@ export default function MeetCarter() {
             {/* Signature-style details */}
             <div className="space-y-3 mb-8">
               {[
-                { icon: MapPin, text: "Based in Fountain Hills — knows the local market cold" },
+                { icon: MapPin, text: "Based in Phoenix — knows the local market cold" },
                 { icon: Clock, text: "Responds within 4 hours — you'll never wonder what's happening" },
                 { icon: MessageSquare, text: "You have Carter's direct number — not an account manager" },
               ].map(({ icon: Icon, text }) => (

@@ -11,12 +11,12 @@ const fraunces = Fraunces({
 });
 
 export const metadata: Metadata = {
-  title: "Drevscale Media | Facebook Ads & Web Design — Fountain Hills, AZ",
-  description: "Drevscale Media helps local businesses in Fountain Hills and Scottsdale, AZ get more leads through professional Facebook advertising and website design. Owner-operated. Transparent pricing.",
-  keywords: "Facebook ads Fountain Hills AZ, Facebook advertising Scottsdale, local business marketing Arizona, web design Fountain Hills",
+  title: "Drevscale Media | Facebook Ads & Web Design — Phoenix, AZ",
+  description: "Drevscale Media helps local businesses in Phoenix, AZ get more leads through professional Facebook advertising and website design. Owner-operated. Transparent pricing.",
+  keywords: "Facebook ads Phoenix AZ, Facebook advertising Phoenix, local business marketing Arizona, web design Phoenix",
   openGraph: {
     title: "Drevscale Media | Facebook Ads for Local Businesses",
-    description: "Done-for-you Facebook ads and web design for small businesses in Fountain Hills & Scottsdale, AZ.",
+    description: "Done-for-you Facebook ads and web design for small businesses in Phoenix, AZ.",
     type: "website",
     locale: "en_US",
   },
@@ -26,23 +26,23 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   name: "Drevscale Media",
-  description: "Facebook ads management and website design for local businesses in Fountain Hills and Scottsdale, AZ.",
+  description: "Facebook ads management and website design for local businesses in Phoenix, AZ.",
   telephone: "+15722727819",
   email: "drevscalemedia@gmail.com",
   address: {
     "@type": "PostalAddress",
-    addressLocality: "Fountain Hills",
+    addressLocality: "Phoenix",
     addressRegion: "AZ",
     addressCountry: "US",
   },
   geo: {
     "@type": "GeoCoordinates",
-    latitude: 33.6064,
-    longitude: -111.7175,
+    latitude: 33.4484,
+    longitude: -112.074,
   },
   url: "https://drevscalemedia.com",
   priceRange: "$$",
-  areaServed: ["Fountain Hills", "Scottsdale", "East Valley", "Arizona"],
+  areaServed: ["Phoenix", "Arizona"],
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

@@ -56,7 +56,7 @@ body {
   border-radius: inherit;
 }
 
-/* Marquee animation */
+/* Marquee animations */
 @keyframes marquee {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
@@ -65,12 +65,58 @@ body {
   animation: marquee 30s linear infinite;
 }
 
+@keyframes marquee-to-left {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes marquee-to-right {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
+}
+
 /* Squiggle divider */
 .squiggle {
   fill: none;
   stroke: var(--color-sand);
   stroke-width: 2;
   stroke-linecap: round;
+}
+
+/* ROI Calculator custom slider */
+.calc-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  border-radius: 9999px;
+  background: rgba(255,255,255,0.08);
+  outline: none;
+  width: 100%;
+}
+.calc-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #1D9BF0;
+  cursor: pointer;
+  box-shadow: 0 0 14px rgba(29,155,240,0.6);
+  border: 2px solid rgba(255,255,255,0.25);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.calc-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+  box-shadow: 0 0 20px rgba(29,155,240,0.8);
+}
+.calc-slider::-moz-range-thumb {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #1D9BF0;
+  cursor: pointer;
+  box-shadow: 0 0 14px rgba(29,155,240,0.6);
+  border: 2px solid rgba(255,255,255,0.25);
 }
 
 @media (prefers-reduced-motion: reduce) {
